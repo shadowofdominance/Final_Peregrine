@@ -7,7 +7,6 @@ import DiveMode from "@/components/sections/DiveMode";
 import WindCurrents from "@/components/sections/WindCurrents";
 import SkyMarkings from "@/components/sections/SkyMarkings";
 import NestView from "@/components/sections/NestView";
-import SignalToSkies from "@/components/sections/SignalToSkies";
 import useKonamiCode from "@/hooks/useKonamiCode";
 
 export default function Home() {
@@ -56,7 +55,6 @@ export default function Home() {
         <WindCurrents />
         <SkyMarkings />
         <NestView />
-        <SignalToSkies />
       </main>
 
       {/* Footer */}
