@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+  --background: 210 40% 3%; /* #0F172A - falcon-night */
+  --foreground: 210 40% 98%; /* #F8FAFC - falcon-cloud */
+  --muted: 215 20% 15%; /* #1E293B - falcon-storm */
+  --muted-foreground: 215 16% 47%; /* #64748B - falcon-steel */
+  --popover: 210 40% 3%;
+  --popover-foreground: 210 40% 98%;
+  --card: 215 20% 15%;
+  --card-foreground: 210 40% 98%;
+  --border: 215 16% 47%;
+  --input: 215 20% 15%;
+  --primary: 213 94% 68%; /* #3B82F6 - falcon-blue */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 215 20% 15%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 215 20% 15%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 213 94% 68%;
+  --radius: 0.5rem;
+  
+  /* Custom Falcon Theme Colors */
+  --falcon-night: 210 40% 3%; /* #0F172A */
+  --falcon-storm: 215 20% 15%; /* #1E293B */
+  --falcon-blue: 213 94% 68%; /* #3B82F6 */
+  --falcon-sky: 213 91% 75%; /* #60A5FA */
+  --falcon-cloud: 210 40% 98%; /* #F8FAFC */
+  --falcon-steel: 215 16% 47%; /* #64748B */
+}
+
+.dark {
+  --background: 210 40% 3%;
+  --foreground: 210 40% 98%;
+  --muted: 215 20% 15%;
+  --muted-foreground: 215 16% 47%;
+  --popover: 210 40% 3%;
+  --popover-foreground: 210 40% 98%;
+  --card: 215 20% 15%;
+  --card-foreground: 210 40% 98%;
+  --border: 215 16% 47%;
+  --input: 215 20% 15%;
+  --primary: 213 94% 68%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 215 20% 15%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 215 20% 15%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 213 91% 75%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+  @apply font-inter antialiased bg-falcon-night text-falcon-cloud overflow-x-hidden;
+  cursor: url('/images/cursor.png') 0 48, auto;
+}
+
+
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .cursor-feather {
+    cursor: url('/images/cursor.png') 0 48, pointer;
+  }
+
+  .bg-falcon-night {
+    background-color: hsl(var(--falcon-night));
+  }
+
+  .bg-falcon-storm {
+    background-color: hsl(var(--falcon-storm));
+  }
+
+  .bg-falcon-blue {
+    background-color: hsl(var(--falcon-blue));
+  }
+
+  .bg-falcon-sky {
+    background-color: hsl(var(--falcon-sky));
+  }
+
+  .bg-falcon-cloud {
+    background-color: hsl(var(--falcon-cloud));
+  }
+
+  .bg-falcon-steel {
+    background-color: hsl(var(--falcon-steel));
+  }
+
+  .text-falcon-night {
+    color: hsl(var(--falcon-night));
+  }
+
+  .text-falcon-storm {
+    color: hsl(var(--falcon-storm));
+  }
+
+  .text-falcon-blue {
+    color: hsl(var(--falcon-blue));
+  }
+
+  .text-falcon-sky {
+    color: hsl(var(--falcon-sky));
+  }
+
+  .text-falcon-cloud {
+    color: hsl(var(--falcon-cloud));
+  }
+
+  .text-falcon-steel {
+    color: hsl(var(--falcon-steel));
+  }
+
+  .border-falcon-blue {
+    border-color: hsl(var(--falcon-blue));
+  }
+
+  .border-falcon-sky {
+    border-color: hsl(var(--falcon-sky));
+  }
+
+  .border-falcon-steel {
+    border-color: hsl(var(--falcon-steel));
+  }
+
+  .glass-effect {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-dive {
+    animation: dive 2s ease-out forwards;
+  }
+
+  .animate-feather-fall {
+    animation: featherFall 4s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-wind-move {
+    animation: windMove 3s ease-in-out infinite;
+  }
+
+  .animate-talon-scratch {
+    animation: talonScratch 1.5s ease-out forwards;
+  }
+
+  .talon-scratch-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .talon-hidden {
+    opacity: 0;
+  }
+
+  .talon-scratch-overlay {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: 
+      repeating-linear-gradient(
+        135deg,
+        #ffffff 0px,
+        #f8fafc 6px,
+        #e2e8f0 8px,
+        transparent 10px,
+        transparent 18px,
+        #ffffff 20px,
+        #f1f5f9 26px,
+        #cbd5e1 28px,
+        transparent 30px,
+        transparent 38px,
+        #ffffff 40px,
+        #e2e8f0 46px,
+        #94a3b8 48px,
+        transparent 50px,
+        transparent 58px
+      );
+    z-index: 10;
+    transform: translateX(-150%) rotate(-15deg);
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(147, 197, 253, 0.6),
+      0 0 60px rgba(59, 130, 246, 0.4);
+  }
+
+  .talon-scratch-active .talon-scratch-overlay {
+    animation: clawSlash 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  }
+
+  .talon-scratch-active .talon-hidden {
+    animation: titleReveal 0.3s ease-out 0.8s forwards;
+  }
+
+  .talon-impact-flash {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: -20%;
+    bottom: -20%;
+    background: radial-gradient(ellipse at center, 
+      rgba(255, 255, 255, 0.95) 0%, 
+      rgba(147, 197, 253, 0.8) 20%,
+      rgba(59, 130, 246, 0.6) 40%,
+      rgba(99, 102, 241, 0.4) 60%,
+      transparent 80%);
+    opacity: 0;
+    z-index: 5;
+    transform: scale(0.5);
+    border-radius: 50%;
+    box-shadow: 
+      0 0 100px rgba(255, 255, 255, 0.9),
+      0 0 200px rgba(147, 197, 253, 0.7),
+      0 0 300px rgba(59, 130, 246, 0.5);
+  }
+  
+  .talon-scratch-active .talon-impact-flash {
+    animation: brightFlash 0.5s ease-out 0.9s forwards;
+  }
+
+  @keyframes clawSlash {
+    0% {
+      transform: translateX(-150%) rotate(-15deg) scaleY(1.2);
+    }
+    30% {
+      transform: translateX(-50%) rotate(-12deg) scaleY(1.1);
+    }
+    70% {
+      transform: translateX(50%) rotate(-8deg) scaleY(1.05);
+    }
+    100% {
+      transform: translateX(150%) rotate(-5deg) scaleY(1);
+    }
+  }
+
+  @keyframes titleReveal {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes brightFlash {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    30% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    60% {
+      opacity: 0.8;
+      transform: scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+
+  @keyframes impactGlow {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes dive {
+    0% {
+      transform: translateY(-100vh) scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes featherFall {
+    0% {
+      transform: translateY(-20px) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(20px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+    }
+  }
+
+  @keyframes windMove {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .project-card {
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+
+  .timeline-item {
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, hsl(var(--falcon-blue)), hsl(var(--falcon-sky)));
+  }
+
+  .achievement-badge {
+    transition: all 0.3s ease;
+  }
+
+  .achievement-badge:hover {
+    transform: rotate(5deg) scale(1.1);
+  }
+
+  .wind-trail {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--falcon-sky)), transparent);
+    animation: windMove 3s ease-in-out infinite;
+  }
+
+  .scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, hsl(var(--falcon-blue)), hsl(var(--falcon-sky)));
+    transform-origin: left;
+    z-index: 1000;
+  }
+}
