@@ -13,6 +13,29 @@ export default function LaunchPoint() {
     }
   };
 
+  const contactLinks = [
+    {
+      icon: "fas fa-envelope",
+      label: "Email",
+      href: "mailto:gouravsapaliga125@gmail.com",
+    },
+    {
+      icon: "fab fa-linkedin",
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/gourav-sapaliga",
+    },
+    {
+      icon: "fab fa-github",
+      label: "GitHub",
+      href: "https://github.com/shadowofdominance",
+    },
+    {
+      icon: "fab fa-twitter",
+      label: "Twitter",
+      href: "https://twitter.com/not_gourav007",
+    },
+  ];
+
   return (
     <section
       id="launch"
@@ -182,24 +205,30 @@ export default function LaunchPoint() {
             SKY'S EDGE
           </span>
         </motion.h1>
-
-        <motion.p
-          className="text-2xl md:text-3xl mb-4 font-light text-falcon-steel"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          Born to fall.
-        </motion.p>
-        <motion.p
-          className="text-2xl md:text-3xl mb-12 font-light text-falcon-steel"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-        >
-          Built to fly.
-        </motion.p>
-
+        <div className="mt-12 pt-8 border-t border-falcon-steel/20">
+          <h3 className="font-orbitron font-bold text-xl text-falcon-cloud text-center mb-8">
+            Alternative Flight Paths
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6">
+            {contactLinks.map((link) => (
+              <motion.a
+                key={link.label}
+                href={link.href}
+                className="flex items-center space-x-3 px-6 py-3 bg-falcon-storm hover:bg-falcon-blue rounded-lg transition-all duration-300 cursor-feather group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <i
+                  className={`${link.icon} text-falcon-sky group-hover:text-white`}
+                ></i>
+                <span className="text-falcon-cloud group-hover:text-white">
+                  {link.label}
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+        <br />
         <motion.button
           onClick={scrollToDive}
           className="group relative px-12 py-4 bg-falcon-blue hover:bg-falcon-sky transition-all duration-300 rounded-full font-orbitron font-bold text-lg cursor-feather transform hover:scale-105 animate-pulse-glow"
@@ -213,15 +242,6 @@ export default function LaunchPoint() {
           <div className="absolute inset-0 bg-gradient-to-r from-falcon-blue to-falcon-sky rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <i className="fas fa-chevron-down ml-3 group-hover:animate-bounce"></i>
         </motion.button>
-
-        {/* Scroll Indicator
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <i className="fas fa-chevron-down text-falcon-sky text-2xl"></i>
-        </motion.div>*/}
       </div>
     </section>
   );
