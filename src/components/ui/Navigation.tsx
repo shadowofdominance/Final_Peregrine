@@ -105,12 +105,6 @@ export default function Navigation() {
             >
               Nest View
             </button>
-            <button
-              onClick={() => scrollTo("#signal")}
-              className="block w-full text-left cursor-feather hover:text-falcon-sky transition-colors"
-            >
-              Signal
-            </button>
           </div>
         )}
       </div>
