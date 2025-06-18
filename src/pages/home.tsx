@@ -11,7 +11,7 @@ import useKonamiCode from "@/hooks/useKonamiCode";
 
 export default function Home() {
   const { triggerEasterEgg } = useKonamiCode();
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -31,19 +31,18 @@ export default function Home() {
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.muted = isMuted;
+      if (!isMuted) {
+        audioRef.current.play().catch((err) => {
+          console.warn("Audio play failed:", err);
+        });
+      }
     }
   }, [isMuted]);
 
   return (
     <div className="relative">
       {/* Ambient Audio */}
-      <audio
-        ref={audioRef}
-        src="/sounds/background2.mp3"
-        loop
-        autoPlay
-        preload="auto"
-      />
+      <audio ref={audioRef} src="/sounds/background2.mp3" loop preload="auto" />
 
       <CustomCursor />
       <ScrollProgress />
