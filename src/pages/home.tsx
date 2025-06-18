@@ -60,11 +60,15 @@ export default function Home() {
       <footer className="bg-falcon-night border-t border-falcon-steel/20 py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <img
-              src="/images/eagle.png"
-              alt="Peregrine Logo"
+            <video
+              src="/videos/falcon.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-8 h-8 object-contain"
             />
+
             <span className="font-orbitron font-bold text-2xl text-falcon-cloud">
               PROJECT PEREGRINE
             </span>
