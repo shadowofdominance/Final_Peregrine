@@ -92,13 +92,14 @@ export default function WindCurrents() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="glass-effect rounded-xl p-8 transform transition-all duration-300">
+              <div className="glass-effect rounded-xl p-8 transform transition-all duration-300 overflow-hidden break-words">
                 <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full md:w-64 h-40 object-center rounded-lg"
+                    className="w-full max-w-[300px] h-auto md:w-64 md:h-40 object-cover rounded-lg"
                   />
+
                   <div className="flex-1">
                     <div className="flex items-center space-x-4 mb-3">
                       <h3 className="font-orbitron font-bold text-2xl text-falcon-cloud">
@@ -121,10 +122,10 @@ export default function WindCurrents() {
                         </span>
                       ))}
                     </div>
-                    <button className="text-falcon-sky hover:text-falcon-cloud transition-colors cursor-feather">
+                    {/*<button className="text-falcon-sky hover:text-falcon-cloud transition-colors cursor-feather">
                       <i className="fas fa-external-link-alt mr-2"></i>
                       View Media
-                    </button>
+                    </button>*/}
                   </div>
                 </div>
               </div>
