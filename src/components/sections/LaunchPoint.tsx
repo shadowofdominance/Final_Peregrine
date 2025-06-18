@@ -39,13 +39,17 @@ export default function LaunchPoint() {
   return (
     <section
       id="launch"
-      className="min-h-screen relative flex items-center justify-center parallax-bg"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('/images/wallhaven-0p2q2m.jpg')",
-      }}
+      className="min-h-screen relative flex items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-falcon-night/50 to-falcon-night"></div>
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src="/videos/falcon.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
 
       {/* Falling Feathers Animation */}
       <div className="absolute inset-0 overflow-hidden">
