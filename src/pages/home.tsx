@@ -80,27 +80,7 @@ export default function Home() {
           <p className="text-falcon-steel text-sm mt-4">
             Ambient music: "Icarus" by Ivan Torrent (feat. Julie Elven) – CC BY
             4.0
-          </p>
-          <p className="text-xs text-falcon-steel mt-2">
-            Video background by{" "}
-            <a
-              href="https://example.com/henrykirkwood"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              Henry Kirkwood Filmmaking
-            </a>{" "}
-            – Licensed under{" "}
-            <a
-              href="https://creativecommons.org/licenses/by/4.0/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              CC BY 4.0
-            </a>
-          </p>
+          </p> 
         </div>
       </footer>
 
