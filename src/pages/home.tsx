@@ -78,9 +78,17 @@ export default function Home() {
             <span>Powered by passion</span>
           </div>
           <p className="text-falcon-steel text-sm mt-4">
-            Ambient music: "Icarus" by Ivan Torrent (feat. Julie Elven) – CC BY
-            4.0
-          </p> 
+            Music: "Titan" by Scott Buckley – released under CC-BY 4.0.
+            <br />
+            <a
+              href="https://www.scottbuckley.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-falcon-gold transition-colors"
+            >
+              www.scottbuckley.com.au
+            </a>
+          </p>
         </div>
       </footer>
 

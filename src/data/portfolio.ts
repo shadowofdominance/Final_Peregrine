@@ -27,9 +27,9 @@ export interface Achievement {
 export const projects: Project[] = [
   {
     id: "mystic-realms",
-    title: "Mystic Realms",
-    description: "An immersive fantasy RPG with procedural world generation and dynamic storytelling systems.",
-    image: "",
+    title: "SwiftEdit",
+    description: "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
+    image: "/images/Swiftedit.png",
     technologies: [".NET", "C#", "WinForms"],
     demoUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git"
@@ -37,20 +37,20 @@ export const projects: Project[] = [
   {
     id: "medai",
     title: "MedAI",
-    description: "High-speed cyberpunk racing game featuring adaptive AI opponents and customizable vehicles.",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+    description: "Med-AI is a sleek web app that scans your symptoms from text and predicts possible diseases in a flash.",
+    image: "/images/medai.jpeg",
     technologies: ["Python", "TypeScript","BERT", "React.js"],
     demoUrl: "https://github.com/shadowofdominance/MedAI.git",
     codeUrl: "https://github.com/shadowofdominance/MedAI.git"
   },
   {
-    id: "quantum-shift",
-    title: "Quantum Shift",
-    description: "Mind-bending puzzle game exploring quantum mechanics through interactive spatial challenges.",
-    image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-    technologies: ["React", "Three.js", "WebGL"],
-    demoUrl: "#",
-    codeUrl: "#"
+    id: "CustomEventSystem",
+    title: "Custom Event System",
+    description: "A C# console-based game event system using delegates, events, and file I/O. Mimics in-game triggers where multiple systems react to a single action.",
+    image: "/images/customeventsystem.png",
+    technologies: ["C#", ".NET", "Console"],
+    demoUrl: "https://github.com/shadowofdominance/CustomEventSystem.git",
+    codeUrl: "https://github.com/shadowofdominance/CustomEventSystem.git"
   }
 ];
 
