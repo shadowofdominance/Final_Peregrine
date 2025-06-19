@@ -92,12 +92,12 @@ export default function WindCurrents() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="glass-effect rounded-xl p-8 transform transition-all duration-300 overflow-hidden break-words">
-                <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
+              <div className="glass-effect rounded-xl p-6 transition-all duration-300 break-words overflow-hidden">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 flex-wrap">
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full max-w-[300px] h-auto md:w-64 md:h-40 object-cover rounded-lg"
+                    className="w-full max-w-[300px] h-auto aspect-video md:h-40 object-cover rounded-lg"
                   />
 
                   <div className="flex-1">

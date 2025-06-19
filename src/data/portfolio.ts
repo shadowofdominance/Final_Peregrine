@@ -67,9 +67,9 @@ export const events: Event[] = [
     id: "game-dev-championship",
     title: "Communities Leadership",
     role: "Admin & Meetup Organizer",
-    description: "Drive synergy across 4 active communities—hosting meetups and nurturing dev culture from the trenches to the summit.",
+    description: "Drive synergy across 4 active communities—hosting meetups and nurturing dev culture from the trenches to the summit.                                  ",
     image: "/images/codezone.jpg",
-    stats: ["500+ Developers Overall"]
+    stats: ["200+ Developers Overall"]
   },
   {
     id: "code-flight-workshop",
