@@ -43,6 +43,7 @@ export default function LaunchPoint() {
 
   return (
     <section
+      id="launch"
       className="min-h-screen relative flex items-center justify-center parallax-bg"
       style={{
         backgroundImage:
