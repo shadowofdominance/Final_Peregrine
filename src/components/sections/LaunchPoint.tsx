@@ -34,6 +34,11 @@ export default function LaunchPoint() {
       label: "Twitter",
       href: "https://twitter.com/not_gourav007",
     },
+    {
+      icon: "fas fa-download",
+      label: "Download Resume",
+      href: "/docs/resume.pdf",
+    },
   ];
 
   return (
