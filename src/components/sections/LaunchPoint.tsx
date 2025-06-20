@@ -189,7 +189,7 @@ export default function LaunchPoint() {
           <i className="fas fa-feather text-falcon-sky opacity-55 text-base"></i>
         </motion.div>
       </div>
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-32 sm:pt-24 md:pt-0">
         {/* Falcon Silhouette */}
         <img
           src="/images/profilepic.jpg"
