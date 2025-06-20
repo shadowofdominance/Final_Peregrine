@@ -8,33 +8,37 @@ export default function SkyMarkings() {
   return (
     <section id="markings" className="min-h-screen py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-falcon-night via-falcon-storm to-falcon-night"></div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.h2 
+          <motion.h2
             className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-falcon-cloud"
             initial={{ opacity: 1 }}
-            whileInView={{ 
+            whileInView={{
               opacity: 1,
-              transition: { 
+              transition: {
                 duration: 0.1,
-                onComplete: () => setIsAnimated(true)
-              }
+                onComplete: () => setIsAnimated(true),
+              },
             }}
             viewport={{ once: true }}
           >
-            <div className={`talon-scratch-container ${isAnimated ? 'talon-scratch-active' : ''}`}>
+            <div
+              className={`talon-scratch-container ${
+                isAnimated ? "talon-scratch-active" : ""
+              }`}
+            >
               <div className="talon-scratch-overlay"></div>
               <div className="talon-impact-flash"></div>
               <span className="talon-hidden relative z-1">SKY MARKINGS</span>
             </div>
-            <motion.span 
+            <motion.span
               className="block text-2xl text-falcon-steel font-inter font-normal mt-2"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +48,7 @@ export default function SkyMarkings() {
               Achievements & Recognition
             </motion.span>
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="w-24 h-1 bg-falcon-sky mx-auto"
             initial={{ scaleX: 0, originX: 0.5 }}
             whileInView={{ scaleX: 1 }}
@@ -69,10 +73,14 @@ export default function SkyMarkings() {
                 <div className="w-24 h-24 mx-auto bg-gradient-to-br from-falcon-blue to-falcon-sky rounded-full flex items-center justify-center text-4xl text-white shadow-2xl group-hover:shadow-falcon-sky/50 transition-all duration-300">
                   <i className={achievement.icon}></i>
                 </div>
-                <motion.div 
+                <motion.div
                   className="absolute -top-2 -right-2 text-falcon-sky opacity-60"
                   animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: index * 0.5,
+                  }}
                 >
                   <i className="fas fa-feather text-sm"></i>
                 </motion.div>
@@ -88,7 +96,7 @@ export default function SkyMarkings() {
         </div>
 
         {/* Skills Constellation */}
-        <motion.div 
+        <motion.div
           className="mt-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

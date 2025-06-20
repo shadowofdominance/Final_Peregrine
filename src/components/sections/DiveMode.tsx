@@ -71,7 +71,7 @@ export default function DiveMode() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-center rounded-lg mb-4"
+                className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <div className="space-y-3">
                 <h3 className="font-orbitron font-bold text-xl text-falcon-cloud">

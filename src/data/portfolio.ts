@@ -83,28 +83,28 @@ export const events: Event[] = [
 
 export const achievements: Achievement[] = [
   {
-    id: "game-dev-excellence",
-    title: "Cybersecurity Winners and Runners",
-    description: "Winners once and Runners twice",
+    id: "cyber-sentinal",
+    title: "Cyber Sentinel Champion",
+    description: "4-time winner in inter-college Capture the Flag (CTF) competitions",
     icon: "fas fa-trophy"
   },
   {
-    id: "community-leader",
-    title: "Community Leader",
-    description: "Outstanding Leadership Award for Event Management",
-    icon: "fas fa-users"
-  },
-  {
-    id: "technical-innovation",
-    title: "Technical Innovation",
-    description: "Best Technical Implementation - Indie Game Showcase",
+    id: "hackathon-highlights",
+    title: "Hackathon Highlights",
+    description: "Runner-Up at a college-level Hackathon and Top 12 out of 100+ participants in a large-scale tech hackathon.",
     icon: "fas fa-code"
   },
   {
+    id: "tech-event-lead",
+    title: "Tech Event Lead",
+    description: "Led the planning and execution of 2 successful cybersecurity events in college.",
+    icon: "fas fa-chalkboard-teacher"
+  },
+  {
     id: "rising-star",
-    title: "Rising Star",
-    description: "Emerging Developer Recognition - Tech Conference 2023",
-    icon: "fas fa-star"
+    title: "CodeZone Secretary",
+    description: "Elected Secretary of CodeZone in final year.",
+    icon: "fas fa-users"
   }
 ];
 
