@@ -37,7 +37,7 @@ export default function LaunchPoint() {
     {
       icon: "fas fa-download",
       label: "Download Resume",
-      href: "/docs/resume.pdf",
+      href: "/docs/gourav_final.pdf",
     },
   ];
 
@@ -204,9 +204,9 @@ export default function LaunchPoint() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <span className="block text-6xl text-falcon-cloud">HEIR TO THE</span>
+          <span className="block text-6xl text-falcon-cloud">GOURAV</span>
           <span className="block text-falcon-sky bg-gradient-to-r from-falcon-blue to-falcon-sky bg-clip-text text-transparent">
-            SKY'S EDGE
+            SAPALIGA
           </span>
         </motion.h1>
         <div className="mt-12 pt-8 border-t border-falcon-steel/20">

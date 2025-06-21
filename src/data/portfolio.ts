@@ -26,7 +26,7 @@ export interface Achievement {
 
 export const projects: Project[] = [
   {
-    id: "mystic-realms",
+    id: "swift-edit",
     title: "SwiftEdit",
     description: "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
     image: "/images/Swiftedit.png",
@@ -42,6 +42,15 @@ export const projects: Project[] = [
     technologies: ["Python", "TypeScript","BERT", "React.js"],
     demoUrl: "https://github.com/shadowofdominance/MedAI.git",
     codeUrl: "https://github.com/shadowofdominance/MedAI.git"
+  },
+  {
+    id: "CustomEventSystem",
+    title: "Custom Event System",
+    description: "A C# console-based game event system using delegates, events, and file I/O. Mimics in-game triggers where multiple systems react to a single action.",
+    image: "/images/customeventsystem.png",
+    technologies: ["C#", ".NET", "Console"],
+    demoUrl: "https://github.com/shadowofdominance/CustomEventSystem.git",
+    codeUrl: "https://github.com/shadowofdominance/CustomEventSystem.git"
   },
   {
     id: "CustomEventSystem",
