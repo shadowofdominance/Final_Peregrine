@@ -52,15 +52,6 @@ export const projects: Project[] = [
     demoUrl: "https://github.com/shadowofdominance/CustomEventSystem.git",
     codeUrl: "https://github.com/shadowofdominance/CustomEventSystem.git"
   },
-  {
-    id: "CustomEventSystem",
-    title: "Custom Event System",
-    description: "A C# console-based game event system using delegates, events, and file I/O. Mimics in-game triggers where multiple systems react to a single action.",
-    image: "/images/customeventsystem.png",
-    technologies: ["C#", ".NET", "Console"],
-    demoUrl: "https://github.com/shadowofdominance/CustomEventSystem.git",
-    codeUrl: "https://github.com/shadowofdominance/CustomEventSystem.git"
-  }
 ];
 
 export const events: Event[] = [
