@@ -4,7 +4,6 @@ export interface Project {
   description: string;
   image: string;
   technologies: string[];
-  demoUrl: string;
   codeUrl: string;
 }
 
@@ -31,7 +30,7 @@ export const projects: Project[] = [
     description: "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
     image: "/images/Swiftedit.png",
     technologies: [".NET", "C#", "WinForms"],
-    demoUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git"
   },
   {
@@ -40,7 +39,6 @@ export const projects: Project[] = [
     description: "Med-AI is a sleek web app that scans your symptoms from text and predicts possible diseases in a flash.",
     image: "/images/medai.jpeg",
     technologies: ["Python", "TypeScript","BERT", "React.js"],
-    demoUrl: "https://github.com/shadowofdominance/MedAI.git",
     codeUrl: "https://github.com/shadowofdominance/MedAI.git"
   },
   {
@@ -49,7 +47,6 @@ export const projects: Project[] = [
     description: "A C# console-based game event system using delegates, events, and file I/O. Mimics in-game triggers where multiple systems react to a single action.",
     image: "/images/customeventsystem.png",
     technologies: ["C#", ".NET", "Console"],
-    demoUrl: "https://github.com/shadowofdominance/CustomEventSystem.git",
     codeUrl: "https://github.com/shadowofdominance/CustomEventSystem.git"
   },
 ];

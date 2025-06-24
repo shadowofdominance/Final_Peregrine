@@ -94,13 +94,6 @@ export default function DiveMode() {
                   </div>
                   <div className="flex space-x-3 pt-2">
                     <a
-                      href={project.demoUrl}
-                      className="flex items-center space-x-2 text-falcon-sky hover:text-falcon-cloud transition-colors cursor-feather"
-                    >
-                      <i className="fas fa-play"></i>
-                      <span>Demo</span>
-                    </a>
-                    <a
                       href={project.codeUrl}
                       className="flex items-center space-x-2 text-falcon-sky hover:text-falcon-cloud transition-colors cursor-feather"
                     >
