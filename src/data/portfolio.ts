@@ -42,12 +42,12 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/shadowofdominance/MedAI.git"
   },
   {
-    id: "CustomEventSystem",
-    title: "Custom Event System",
-    description: "A C# console-based game event system using delegates, events, and file I/O. Mimics in-game triggers where multiple systems react to a single action.",
-    image: "/images/customeventsystem.png",
-    technologies: ["C#", ".NET", "Console"],
-    codeUrl: "https://github.com/shadowofdominance/CustomEventSystem.git"
+    id: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
+    title: "Unity test game",
+    description: "A Unity-built prototype featuring grid-based movement, custom editor tools for obstacle placement, BFS pathfinding, and responsive enemy AI. Developed from scratch to simulate turn-based tactical gameplay.",
+    image: "/images/unitytestgame.png",
+    technologies: ["C#", "Unity3D"],
+    codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git"
   },
 ];
 
