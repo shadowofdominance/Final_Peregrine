@@ -42,8 +42,8 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/shadowofdominance/MedAI.git"
   },
   {
-    id: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
-    title: "Unity test game",
+    id: "Unity test game",
+    title: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
     description: "A Unity-built prototype featuring grid-based movement, custom editor tools for obstacle placement, BFS pathfinding, and responsive enemy AI. Developed from scratch to simulate turn-based tactical gameplay.",
     image: "/images/unitytestgame.png",
     technologies: ["C#", "Unity3D"],
