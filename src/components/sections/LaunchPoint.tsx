@@ -22,7 +22,7 @@ export default function LaunchPoint() {
     {
       icon: "fab fa-linkedin",
       label: "LinkedIn",
-      href: "linkedin.com/in/gourav-sapaliga-658032262",
+      href: "https://linkedin.com/in/gourav-sapaliga-658032262",
     },
     {
       icon: "fab fa-github",
