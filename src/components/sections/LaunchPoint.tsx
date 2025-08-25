@@ -192,10 +192,10 @@ export default function LaunchPoint() {
       </div>
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-32 sm:pt-24 md:pt-0">
         {/* Falcon Silhouette */}
-        <img
+        <img 
           src="/images/profilepic.jpg"
           alt="Peregrine falcon silhouette"
-          className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full object-center border-4 border-falcon-sky"
+ className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full object-center border-4 border-falcon-sky"
         />
         <br />
         <motion.h1
@@ -203,9 +203,10 @@ export default function LaunchPoint() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
+ className="font-orbitron font-black text-6xl md:text-8xl mb-6 leading-tight break-words"
         >
-          <span className="block text-6xl text-falcon-cloud">GOURAV</span>
-          <span className="block text-falcon-sky bg-gradient-to-r from-falcon-blue to-falcon-sky bg-clip-text text-transparent">
+          <span className="block text-6xl text-falcon-cloud break-words">GOURAV</span>
+ <span className="block text-falcon-sky bg-gradient-to-r from-falcon-blue to-falcon-sky bg-clip-text text-transparent break-words">
             SAPALIGA
           </span>
         </motion.h1>
@@ -213,7 +214,7 @@ export default function LaunchPoint() {
           <h3 className="font-orbitron font-bold text-xl text-falcon-cloud text-center mb-8">
             Alternative Flight Paths
           </h3>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-6 break-words">
             {contactLinks.map((link) => (
               <motion.a
                 key={link.label}
@@ -225,7 +226,7 @@ export default function LaunchPoint() {
                 <i
                   className={`${link.icon} text-falcon-sky group-hover:text-white`}
                 ></i>
-                <span className="text-falcon-cloud group-hover:text-white">
+ <span className="text-falcon-cloud group-hover:text-white break-words">
                   {link.label}
                 </span>
               </motion.a>

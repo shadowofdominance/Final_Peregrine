@@ -92,7 +92,7 @@ export default function WindCurrents() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="glass-effect rounded-xl p-6 transition-all duration-300 break-words overflow-hidden">
+              <div className="glass-effect rounded-xl p-6 transition-all duration-300 break-words overflow-hidden text-wrap">
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 flex-wrap">
                   <img
                     src={event.image}
@@ -109,7 +109,7 @@ export default function WindCurrents() {
                         {event.role}
                       </span>
                     </div>
-                    <p className="text-falcon-steel mb-4">
+                    <p className="text-falcon-steel mb-4 text-wrap">
                       {event.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
