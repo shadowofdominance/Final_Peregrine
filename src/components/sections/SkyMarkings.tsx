@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { achievements, skills } from "@/data/portfolio";
 
 export default function SkyMarkings() {
   const [isAnimated, setIsAnimated] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
-    <section id="markings" className="min-h-screen py-20 relative">
+    <section
+      id="markings"
+      className="min-h-screen py-20 relative bg-background"
+    >
       <div className="section-fade-top" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted to-background"></div>
       <div className="section-fade-bottom" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -21,15 +25,11 @@ export default function SkyMarkings() {
         >
           <motion.h2
             className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-foreground"
-            initial={{ opacity: 1 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 0.1,
-                onComplete: () => setIsAnimated(true),
-              },
-            }}
+            initial={isMobile ? { opacity: 1 } : { opacity: 0, y: 40 }}
+            whileInView={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
+            onAnimationComplete={() => setIsAnimated(true)}
           >
             <div
               className={`talon-scratch-container ${
@@ -42,9 +42,9 @@ export default function SkyMarkings() {
             </div>
             <motion.span
               className="block text-2xl text-muted-foreground font-inter font-normal mt-2"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
+              initial={isMobile ? { opacity: 1 } : { opacity: 0, y: 25 }}
+              whileInView={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: isMobile ? 0 : 0.3 }}
               viewport={{ once: true }}
             >
               Achievements & Recognition
@@ -72,7 +72,7 @@ export default function SkyMarkings() {
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <div className="relative mb-6">
-                <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary to-ring rounded-full flex items-center justify-center text-4xl text-white shadow-2xl group-hover:shadow-ring/50 transition-all duration-300">
+                <div className="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center text-4xl text-white shadow-2xl group-hover:shadow-ring/50 transition-all duration-300">
                   <i className={achievement.icon}></i>
                 </div>
                 <motion.div

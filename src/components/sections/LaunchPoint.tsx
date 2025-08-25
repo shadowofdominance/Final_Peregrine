@@ -41,14 +41,8 @@ export default function LaunchPoint() {
   return (
     <section
       id="launch"
-      className="min-h-screen relative flex items-center justify-center parallax-bg"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(40,42,54,0.75), rgba(40,42,54,0.85)), url('/images/wallhaven-0p2q2m.jpg')",
-      }}
+      className="min-h-screen relative flex items-center justify-center bg-background"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
-
       {/* Falling Feathers Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
         {[
@@ -155,9 +149,7 @@ export default function LaunchPoint() {
           transition={{ duration: 1, delay: 0.4 }}
         >
           <span className="block text-foreground">GOURAV</span>
-          <span className="block bg-gradient-to-r from-primary to-ring bg-clip-text text-transparent">
-            SAPALIGA
-          </span>
+          <span className="block text-primary">SAPALIGA</span>
         </motion.h1>
 
         <div className="mt-10 sm:mt-12 pt-8 border-t border-muted-foreground/20">
@@ -186,7 +178,7 @@ export default function LaunchPoint() {
 
         <motion.button
           onClick={scrollToDive}
-          className="mt-10 group relative px-10 sm:px-12 py-4 bg-primary hover:bg-ring transition-all duration-300 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather transform hover:scale-105 animate-pulse-glow"
+          className="mt-10 group relative px-10 sm:px-12 py-4 bg-primary hover:bg-ring transition-all duration-300 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather transform hover:scale-105"
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -194,7 +186,7 @@ export default function LaunchPoint() {
           whileTap={{ scale: 0.95 }}
         >
           <span className="relative z-10">BEGIN DESCENT</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary to-ring rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 bg-ring" />
           <i className="fas fa-chevron-down ml-3 group-hover:animate-bounce" />
         </motion.button>
       </div>

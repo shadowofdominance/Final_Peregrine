@@ -1,41 +1,31 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { events } from "@/data/portfolio";
 
 export default function WindCurrents() {
   const [isAnimated, setIsAnimated] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <section
       id="currents"
-      className="min-h-screen py-20 relative overflow-hidden"
+      className="min-h-screen py-20 relative overflow-hidden bg-muted"
     >
       <div className="section-fade-top" />
-      {/* Background Image (alternating section with image) */}
-      <div
-        className="absolute inset-0 opacity-40 sm:opacity-50 parallax-bg transition-opacity duration-700"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(40,42,54,0.35), rgba(40,42,54,0.75)), url('/images/windcurrents.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      {/* Soft translucent gradient overlay to keep text readable while showing image */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/50 to-background/80" />
       <div className="section-fade-bottom" />
 
       {/* Animated Wind Trails */}
-      <div className="absolute inset-0">
-        <div className="wind-trail top-1/4 animate-wind-move"></div>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="wind-trail top-1/4 animate-wind-move" />
         <div
           className="wind-trail top-1/2 animate-wind-move"
           style={{ animationDelay: "1s" }}
-        ></div>
+        />
         <div
           className="wind-trail top-3/4 animate-wind-move"
           style={{ animationDelay: "2s" }}
-        ></div>
+        />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
@@ -48,15 +38,11 @@ export default function WindCurrents() {
         >
           <motion.h2
             className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-foreground"
-            initial={{ opacity: 1 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 0.1,
-                onComplete: () => setIsAnimated(true),
-              },
-            }}
+            initial={isMobile ? { opacity: 1 } : { opacity: 0, y: 40 }}
+            whileInView={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
+            onAnimationComplete={() => setIsAnimated(true)}
           >
             <div
               className={`talon-scratch-container ${
@@ -69,9 +55,9 @@ export default function WindCurrents() {
             </div>
             <motion.span
               className="block text-2xl text-muted-foreground font-inter font-normal mt-2"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
+              initial={isMobile ? { opacity: 1 } : { opacity: 0, y: 25 }}
+              whileInView={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: isMobile ? 0 : 0.3 }}
               viewport={{ once: true }}
             >
               Event Leadership Journey

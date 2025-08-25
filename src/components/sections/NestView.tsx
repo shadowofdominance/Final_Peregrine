@@ -27,15 +27,9 @@ export default function NestView() {
   ];
 
   return (
-    <section id="nest" className="min-h-screen py-20 relative">
+    <section id="nest" className="min-h-screen py-20 relative bg-muted">
       <div className="section-fade-top" />
-      <div
-        className="absolute inset-0 parallax-bg"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(40,42,54,0.85), rgba(40,42,54,0.9)), url('/images/nestview.jpg')",
-        }}
-      />
+      {/* Removed image/gradient for solid Dracula color */}
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
