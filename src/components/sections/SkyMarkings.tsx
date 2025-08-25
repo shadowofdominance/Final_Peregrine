@@ -63,7 +63,7 @@ export default function SkyMarkings() {
             <motion.div
               key={achievement.id}
               className="achievement-badge text-center cursor-feather group"
-              initial={{ opacity: 0, scale: 0.8 }}
+ initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
@@ -88,7 +88,7 @@ export default function SkyMarkings() {
               <h3 className="font-orbitron font-bold text-lg text-falcon-cloud mb-2">
                 {achievement.title}
               </h3>
-              <p className="text-falcon-steel text-sm">
+ <p className="text-falcon-steel text-sm break-words">
                 {achievement.description}
               </p>
             </motion.div>
@@ -110,7 +110,7 @@ export default function SkyMarkings() {
             {skills.map((skill, index) => (
               <motion.span
                 key={skill}
-                className="px-6 py-3 bg-falcon-storm border border-falcon-blue rounded-full text-falcon-sky font-semibold cursor-feather hover:bg-falcon-blue hover:text-white transition-all duration-300"
+ className="px-4 py-2 bg-falcon-storm border border-falcon-blue rounded-full text-falcon-sky font-semibold cursor-feather hover:bg-falcon-blue hover:text-white transition-all duration-300 text-xs md:text-sm whitespace-normal"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
