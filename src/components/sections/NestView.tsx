@@ -148,8 +148,12 @@ export default function NestView() {
           <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.8 },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
             viewport={{ once: true }}
           >
             <img

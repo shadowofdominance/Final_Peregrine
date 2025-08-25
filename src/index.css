@@ -5,56 +5,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap');
 
 :root {
-  --background: 210 40% 3%; /* #0F172A - falcon-night */
-  --foreground: 210 40% 98%; /* #F8FAFC - falcon-cloud */
-  --muted: 215 20% 15%; /* #1E293B - falcon-storm */
-  --muted-foreground: 215 16% 47%; /* #64748B - falcon-steel */
-  --popover: 210 40% 3%;
-  --popover-foreground: 210 40% 98%;
-  --card: 215 20% 15%;
-  --card-foreground: 210 40% 98%;
-  --border: 215 16% 47%;
-  --input: 215 20% 15%;
-  --primary: 213 94% 68%; /* #3B82F6 - falcon-blue */
-  --primary-foreground: 210 40% 98%;
-  --secondary: 215 20% 15%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 215 20% 15%;
-  --accent-foreground: 210 40% 98%;
+  --background: 248 24% 20%; /* #282a36 - Dracula Background */
+  --foreground: 248 24% 97%; /* #f8f8f2 - Dracula Foreground */
+  --muted: 248 17% 29%; /* #44475a - Dracula Current Line */
+  --muted-foreground: 227 24% 65%; /* #6272a4 - Dracula Comment */
+  --popover: 248 24% 20%;
+  --popover-foreground: 248 24% 97%;
+  --card: 248 17% 29%;
+  --card-foreground: 248 24% 97%;
+  --border: 227 24% 65%;
+  --input: 248 17% 29%;
+  --primary: 263 84% 79%; /* #bd93f9 - Dracula Purple */
+  --primary-foreground: 248 24% 97%;
+  --secondary: 155 95% 64%; /* #50fa7b - Dracula Green */
+  --secondary-foreground: 248 24% 97%;
+  --accent: 36 100% 71%; /* #ffb86c - Dracula Orange */
+  --accent-foreground: 248 24% 97%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
-  --ring: 213 94% 68%;
+  --ring: 179 91% 77%; /* #8be9fd - Dracula Cyan */
   --radius: 0.5rem;
-  
-  /* Custom Falcon Theme Colors */
-  --falcon-night: 210 40% 3%; /* #0F172A */
-  --falcon-storm: 215 20% 15%; /* #1E293B */
-  --falcon-blue: 213 94% 68%; /* #3B82F6 */
-  --falcon-sky: 213 91% 75%; /* #60A5FA */
-  --falcon-cloud: 210 40% 98%; /* #F8FAFC */
-  --falcon-steel: 215 16% 47%; /* #64748B */
 }
 
 .dark {
-  --background: 210 40% 3%;
-  --foreground: 210 40% 98%;
-  --muted: 215 20% 15%;
-  --muted-foreground: 215 16% 47%;
-  --popover: 210 40% 3%;
-  --popover-foreground: 210 40% 98%;
-  --card: 215 20% 15%;
-  --card-foreground: 210 40% 98%;
-  --border: 215 16% 47%;
-  --input: 215 20% 15%;
-  --primary: 213 94% 68%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 215 20% 15%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 215 20% 15%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 213 91% 75%;
+  --background: 248 24% 20%;
+  --foreground: 248 24% 97%;
 }
 
 @layer base {
@@ -63,7 +38,7 @@
   }
 
   body {
-  @apply font-inter antialiased bg-falcon-night text-falcon-cloud overflow-x-hidden;
+  @apply font-inter antialiased bg-background text-foreground overflow-x-hidden;
   cursor: url('/images/cursor.png') 0 48, auto;
 }
 
@@ -93,55 +68,6 @@
     opacity: 0.6;
     transition: all 0.2s ease;
   }
-
-  .bg-falcon-night {
-    background-color: hsl(var(--falcon-night));
-  }
-
-  .bg-falcon-storm {
-    background-color: hsl(var(--falcon-storm));
-  }
-
-  .bg-falcon-blue {
-    background-color: hsl(var(--falcon-blue));
-  }
-
-  .bg-falcon-sky {
-    background-color: hsl(var(--falcon-sky));
-  }
-
-  .bg-falcon-cloud {
-    background-color: hsl(var(--falcon-cloud));
-  }
-
-  .bg-falcon-steel {
-    background-color: hsl(var(--falcon-steel));
-  }
-
-  .text-falcon-night {
-    color: hsl(var(--falcon-night));
-  }
-
-  .text-falcon-storm {
-    color: hsl(var(--falcon-storm));
-  }
-
-  .text-falcon-blue {
-    color: hsl(var(--falcon-blue));
-  }
-
-  .text-falcon-sky {
-    color: hsl(var(--falcon-sky));
-  }
-
-  .text-falcon-cloud {
-    color: hsl(var(--falcon-cloud));
-  }
-
-  .text-falcon-steel {
-    color: hsl(var(--falcon-steel));
-  }
-
   .border-falcon-blue {
     border-color: hsl(var(--falcon-blue));
   }
