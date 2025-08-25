@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import CinematicTitle from "@/components/ui/CinematicTitle";
+import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { achievements, skills } from "@/data/portfolio";
 
 export default function SkyMarkings() {
+  const [isAnimated, setIsAnimated] = useState(false);
   const isMobile = useIsMobile();
 
   return (
@@ -15,12 +16,48 @@ export default function SkyMarkings() {
       <div className="section-fade-bottom" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <CinematicTitle
-            title="SKY MARKINGS"
-            subtitle="Achievements & Recognition"
-          />
-        </div>
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2
+            className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-foreground"
+            initial={isMobile ? { opacity: 1 } : { opacity: 0, y: 40 }}
+            whileInView={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            onAnimationComplete={() => setIsAnimated(true)}
+          >
+            <div
+              className={`talon-scratch-container ${
+                isAnimated ? "talon-scratch-active" : ""
+              }`}
+            >
+              <div className="talon-scratch-overlay"></div>
+              <div className="talon-impact-flash"></div>
+              <span className="talon-hidden relative z-1">SKY MARKINGS</span>
+            </div>
+            <motion.span
+              className="block text-2xl text-muted-foreground font-inter font-normal mt-2"
+              initial={isMobile ? { opacity: 1 } : { opacity: 0, y: 25 }}
+              whileInView={isMobile ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: isMobile ? 0 : 0.3 }}
+              viewport={{ once: true }}
+            >
+              Achievements & Recognition
+            </motion.span>
+          </motion.h2>
+          <motion.div
+            className="w-24 h-1 bg-ring mx-auto"
+            initial={{ scaleX: 0, originX: 0.5 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1.2, delay: 1.2 }}
+            viewport={{ once: true }}
+          ></motion.div>
+        </motion.div>
 
         {/* Achievement Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import CinematicTitle from "@/components/ui/CinematicTitle";
 
 export default function LaunchPoint() {
   const scrollToDive = () => {
@@ -155,9 +154,15 @@ export default function LaunchPoint() {
           className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full object-cover border-4 border-ring shadow-lg"
           loading="lazy"
         />
-        <div className="mt-10 mb-4">
-          <CinematicTitle title="GOURAV" subtitle="SAPALIGA" />
-        </div>
+        <motion.h1
+          className="font-orbitron font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-6 leading-[1.05] break-words tracking-tight mt-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          <span className="block text-foreground">GOURAV</span>
+          <span className="block text-primary">SAPALIGA</span>
+        </motion.h1>
 
         <div className="mt-10 sm:mt-12 pt-8 border-t border-muted-foreground/20">
           <h3 className="font-orbitron font-bold text-lg sm:text-xl text-foreground text-center mb-6 sm:mb-8">
