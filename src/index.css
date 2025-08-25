@@ -355,6 +355,28 @@
     z-index: 1000;
   }
 
+  /* Section blend utilities */
+  .section-fade-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, hsl(var(--background)) 0%, rgba(40,42,54,0.85) 40%, rgba(40,42,54,0) 100%);
+    z-index: 5;
+  }
+  .section-fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    pointer-events: none;
+    background: linear-gradient(to top, hsl(var(--background)) 0%, rgba(40,42,54,0.85) 55%, rgba(40,42,54,0) 100%);
+    z-index: 5;
+  }
+
   /* Responsive Quality-of-Life Tweaks */
   @media (max-width: 640px) {
     /* Disable fixed backgrounds on mobile to avoid jitter & performance issues */

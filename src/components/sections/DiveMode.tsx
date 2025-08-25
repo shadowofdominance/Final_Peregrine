@@ -8,7 +8,9 @@ export default function DiveMode() {
 
   return (
     <section id="dive" className="min-h-screen py-20 relative">
+      <div className="section-fade-top" />
       <div className="absolute inset-0 bg-gradient-to-b from-background to-muted"></div>
+      <div className="section-fade-bottom" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div

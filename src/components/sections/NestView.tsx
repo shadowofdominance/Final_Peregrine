@@ -28,6 +28,7 @@ export default function NestView() {
 
   return (
     <section id="nest" className="min-h-screen py-20 relative">
+      <div className="section-fade-top" />
       <div
         className="absolute inset-0 parallax-bg"
         style={{
@@ -194,6 +195,7 @@ export default function NestView() {
           </motion.div>
         </div>
       </div>
+      <div className="section-fade-bottom" />
     </section>
   );
 }
