@@ -18,7 +18,7 @@ export default function WindCurrents() {
           backgroundPosition: "center",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-falcon-storm to-falcon-night"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-muted to-background"></div>
 
       {/* Animated Wind Trails */}
       <div className="absolute inset-0">
@@ -42,7 +42,7 @@ export default function WindCurrents() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-falcon-cloud"
+            className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-foreground"
             initial={{ opacity: 1 }}
             whileInView={{
               opacity: 1,
@@ -63,7 +63,7 @@ export default function WindCurrents() {
               <span className="talon-hidden relative z-1">WIND CURRENTS</span>
             </div>
             <motion.span
-              className="block text-2xl text-falcon-steel font-inter font-normal mt-2"
+              className="block text-2xl text-muted-foreground font-inter font-normal mt-2"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
@@ -73,7 +73,7 @@ export default function WindCurrents() {
             </motion.span>
           </motion.h2>
           <motion.div
-            className="w-24 h-1 bg-falcon-sky mx-auto"
+            className="w-24 h-1 bg-ring mx-auto"
             initial={{ width: 0 }}
             whileInView={{ width: "6rem" }}
             transition={{ duration: 1, delay: 1 }}
@@ -102,21 +102,21 @@ export default function WindCurrents() {
 
                   <div className="flex-1">
                     <div className="flex items-center space-x-4 mb-3">
-                      <h3 className="font-orbitron font-bold text-2xl text-falcon-cloud">
+                      <h3 className="font-orbitron font-bold text-2xl text-foreground">
                         {event.title}
                       </h3>
-                      <span className="px-3 py-1 bg-falcon-blue/20 text-falcon-sky text-sm rounded-full font-semibold">
+                      <span className="px-3 py-1 bg-primary/20 text-ring text-sm rounded-full font-semibold">
                         {event.role}
                       </span>
                     </div>
-                    <p className="text-falcon-steel mb-4 text-wrap">
+                    <p className="text-muted-foreground mb-4 text-wrap">
                       {event.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {event.stats.map((stat) => (
                         <span
                           key={stat}
-                          className="px-2 py-1 bg-falcon-storm text-falcon-sky text-xs rounded"
+                          className="px-2 py-1 bg-muted text-ring text-xs rounded"
                         >
                           {stat}
                         </span>

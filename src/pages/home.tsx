@@ -57,7 +57,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-falcon-night border-t border-falcon-steel/20 py-10 mt-10">
+      <footer className="bg-background border-t border-muted-foreground/20 py-10 mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
             <img
@@ -65,28 +65,28 @@ export default function Home() {
               alt="Peregrine Logo"
               className="w-8 h-8 object-contain"
             />
-            <span className="font-orbitron font-bold text-2xl text-falcon-cloud">
+            <span className="font-orbitron font-bold text-2xl text-foreground">
               PROJECT PEREGRINE
             </span>
           </div>
-          <p className="text-falcon-steel mb-4 text-sm sm:text-base">
+          <p className="text-muted-foreground mb-4 text-sm sm:text-base">
             Born to fall. Built to fly.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 text-falcon-steel space-y-2 sm:space-y-0 text-xs sm:text-sm">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 text-muted-foreground space-y-2 sm:space-y-0 text-xs sm:text-sm">
             <span>© 2025 Project Peregrine</span>
             <span className="hidden sm:inline">•</span>
             <span>Crafted with precision</span>
             <span className="hidden sm:inline">•</span>
             <span>Powered by passion</span>
           </div>
-          <p className="text-falcon-steel text-xs sm:text-sm mt-5 leading-relaxed">
+          <p className="text-muted-foreground text-xs sm:text-sm mt-5 leading-relaxed">
             Music: "Titan" by Scott Buckley – released under CC-BY 4.0.
             <br />
             <a
               href="https://www.scottbuckley.com.au"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-falcon-gold transition-colors"
+              className="underline hover:text-accent transition-colors"
             >
               www.scottbuckley.com.au
             </a>
@@ -97,7 +97,7 @@ export default function Home() {
       {/* Audio Controls */}
       <div className="fixed bottom-6 right-6 z-50">
         <button
-          className="w-12 h-12 bg-falcon-storm hover:bg-falcon-blue rounded-full flex items-center justify-center text-falcon-sky hover:text-white transition-all duration-300 cursor-feather shadow-lg"
+          className="w-12 h-12 bg-muted hover:bg-primary rounded-full flex items-center justify-center text-ring hover:text-white transition-all duration-300 cursor-feather shadow-lg"
           onClick={() => setIsMuted((prev) => !prev)}
         >
           <i

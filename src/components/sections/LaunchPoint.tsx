@@ -44,10 +44,10 @@ export default function LaunchPoint() {
       className="min-h-screen relative flex items-center justify-center parallax-bg"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('/images/wallhaven-0p2q2m.jpg')",
+          "linear-gradient(rgba(40,42,54,0.75), rgba(40,42,54,0.85)), url('/images/wallhaven-0p2q2m.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-falcon-night/50 to-falcon-night" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
 
       {/* Falling Feathers Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
@@ -136,7 +136,7 @@ export default function LaunchPoint() {
               repeatDelay: 1,
             }}
           >
-            <i className={`fas fa-feather text-falcon-sky ${f.cls}`} />
+            <i className={`fas fa-feather text-ring ${f.cls}`} />
           </motion.div>
         ))}
       </div>
@@ -145,7 +145,7 @@ export default function LaunchPoint() {
         <img
           src="/images/profilepic.jpg"
           alt="Portrait of Gourav Sapaliga"
-          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full object-cover border-4 border-falcon-sky shadow-lg"
+          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full object-cover border-4 border-ring shadow-lg"
           loading="lazy"
         />
         <motion.h1
@@ -154,14 +154,14 @@ export default function LaunchPoint() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <span className="block text-falcon-cloud">GOURAV</span>
-          <span className="block bg-gradient-to-r from-falcon-blue to-falcon-sky bg-clip-text text-transparent">
+          <span className="block text-foreground">GOURAV</span>
+          <span className="block bg-gradient-to-r from-primary to-ring bg-clip-text text-transparent">
             SAPALIGA
           </span>
         </motion.h1>
 
-        <div className="mt-10 sm:mt-12 pt-8 border-t border-falcon-steel/20">
-          <h3 className="font-orbitron font-bold text-lg sm:text-xl text-falcon-cloud text-center mb-6 sm:mb-8">
+        <div className="mt-10 sm:mt-12 pt-8 border-t border-muted-foreground/20">
+          <h3 className="font-orbitron font-bold text-lg sm:text-xl text-foreground text-center mb-6 sm:mb-8">
             Alternative Flight Paths
           </h3>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
@@ -169,14 +169,14 @@ export default function LaunchPoint() {
               <motion.a
                 key={link.label}
                 href={link.href}
-                className="flex items-center space-x-2 sm:space-x-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-falcon-storm/80 hover:bg-falcon-blue/90 rounded-lg transition-all duration-300 cursor-feather group backdrop-blur-sm text-sm sm:text-base"
+                className="flex items-center space-x-2 sm:space-x-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-muted/70 hover:bg-primary/70 rounded-lg transition-all duration-300 cursor-feather group backdrop-blur-sm text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <i
-                  className={`${link.icon} text-falcon-sky group-hover:text-white`}
+                  className={`${link.icon} text-ring group-hover:text-white`}
                 />
-                <span className="text-falcon-cloud group-hover:text-white whitespace-nowrap">
+                <span className="text-foreground group-hover:text-white whitespace-nowrap">
                   {link.label}
                 </span>
               </motion.a>
@@ -186,7 +186,7 @@ export default function LaunchPoint() {
 
         <motion.button
           onClick={scrollToDive}
-          className="mt-10 group relative px-10 sm:px-12 py-4 bg-falcon-blue hover:bg-falcon-sky transition-all duration-300 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather transform hover:scale-105 animate-pulse-glow"
+          className="mt-10 group relative px-10 sm:px-12 py-4 bg-primary hover:bg-ring transition-all duration-300 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather transform hover:scale-105 animate-pulse-glow"
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -194,7 +194,7 @@ export default function LaunchPoint() {
           whileTap={{ scale: 0.95 }}
         >
           <span className="relative z-10">BEGIN DESCENT</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-falcon-blue to-falcon-sky rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary to-ring rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <i className="fas fa-chevron-down ml-3 group-hover:animate-bounce" />
         </motion.button>
       </div>

@@ -32,7 +32,7 @@ export default function NestView() {
         className="absolute inset-0 parallax-bg"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/images/nestview.jpg')",
+            "linear-gradient(rgba(40,42,54,0.85), rgba(40,42,54,0.9)), url('/images/nestview.jpg')",
         }}
       />
 
@@ -45,7 +45,7 @@ export default function NestView() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-falcon-cloud"
+            className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-foreground"
             initial={{ opacity: 1 }}
             whileInView={{
               opacity: 1,
@@ -66,7 +66,7 @@ export default function NestView() {
               <span className="talon-hidden relative z-1">NEST VIEW</span>
             </div>
             <motion.span
-              className="block text-2xl text-falcon-steel font-inter font-normal mt-2"
+              className="block text-2xl text-muted-foreground font-inter font-normal mt-2"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
@@ -76,7 +76,7 @@ export default function NestView() {
             </motion.span>
           </motion.h2>
           <motion.div
-            className="w-24 h-1 bg-falcon-sky mx-auto"
+            className="w-24 h-1 bg-ring mx-auto"
             initial={{ scaleX: 0, rotateZ: 45 }}
             whileInView={{ scaleX: 1, rotateZ: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
@@ -93,10 +93,10 @@ export default function NestView() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-orbitron font-bold text-2xl text-falcon-cloud mb-6">
+            <h3 className="font-orbitron font-bold text-2xl text-foreground mb-6">
               The Journey of Resilience
             </h3>
-            <div className="space-y-4 text-falcon-steel text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
               <p>
                 Like the peregrine falcon, my journey began with a leap of
                 faith. From the heights of uncertainty to the precision of
@@ -130,13 +130,11 @@ export default function NestView() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-3xl text-falcon-sky mb-2">
-                    {quality.icon}
-                  </div>
-                  <h4 className="font-orbitron font-semibold text-falcon-cloud">
+                  <div className="text-3xl text-ring mb-2">{quality.icon}</div>
+                  <h4 className="font-orbitron font-semibold text-foreground">
                     {quality.title}
                   </h4>
-                  <p className="text-sm text-falcon-steel">
+                  <p className="text-sm text-muted-foreground">
                     {quality.description}
                   </p>
                 </motion.div>
@@ -185,11 +183,11 @@ export default function NestView() {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <blockquote className="text-xl font-light text-falcon-cloud italic mb-4">
+              <blockquote className="text-xl font-light text-foreground italic mb-4">
                 "Don't you want to take a leap of faith? Or become an old man,
                 filled with regret, waiting to die alone!"
               </blockquote>
-              <cite className="text-falcon-steel text-sm">
+              <cite className="text-muted-foreground text-sm">
                 — Saito, Inception (2010)
               </cite>
             </motion.div>

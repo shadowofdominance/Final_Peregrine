@@ -8,7 +8,7 @@ export default function DiveMode() {
 
   return (
     <section id="dive" className="min-h-screen py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-falcon-night to-falcon-storm"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-muted"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div
@@ -19,7 +19,7 @@ export default function DiveMode() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="font-orbitron font-bold text-4xl sm:text-5xl md:text-6xl mb-6 text-falcon-cloud leading-tight"
+            className="font-orbitron font-bold text-4xl sm:text-5xl md:text-6xl mb-6 text-foreground leading-tight"
             initial={{ opacity: 1 }}
             whileInView={{
               opacity: 1,
@@ -40,7 +40,7 @@ export default function DiveMode() {
               <span className="talon-hidden relative z-1">DIVE MODE</span>
             </div>
             <motion.span
-              className="block text-2xl text-falcon-steel font-inter font-normal mt-2"
+              className="block text-2xl text-muted-foreground font-inter font-normal mt-2"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
@@ -50,7 +50,7 @@ export default function DiveMode() {
             </motion.span>
           </motion.h2>
           <motion.div
-            className="w-24 h-1 bg-falcon-sky mx-auto"
+            className="w-24 h-1 bg-ring mx-auto"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -76,17 +76,17 @@ export default function DiveMode() {
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <div className="space-y-3">
-                  <h3 className="font-orbitron font-bold text-xl text-falcon-cloud">
+                  <h3 className="font-orbitron font-bold text-xl text-foreground">
                     {project.title}
                   </h3>
-                  <p className="text-falcon-steel text-sm">
+                  <p className="text-muted-foreground text-sm">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-falcon-blue/20 text-falcon-sky text-xs rounded-full"
+                        className="px-3 py-1 bg-primary/20 text-ring text-xs rounded-full"
                       >
                         {tech}
                       </span>
@@ -95,7 +95,7 @@ export default function DiveMode() {
                   <div className="flex space-x-3 pt-2">
                     <a
                       href={project.codeUrl}
-                      className="flex items-center space-x-2 text-falcon-sky hover:text-falcon-cloud transition-colors cursor-feather"
+                      className="flex items-center space-x-2 text-ring hover:text-foreground transition-colors cursor-feather"
                     >
                       <i className="fab fa-github"></i>
                       <span>Code</span>
@@ -117,7 +117,7 @@ export default function DiveMode() {
           {projects.length > 3 && (
             <button
               onClick={() => setShowAllProjects(!showAllProjects)}
-              className="px-8 py-3 border-2 border-falcon-sky text-falcon-sky hover:bg-falcon-sky hover:text-falcon-night transition-all duration-300 rounded-full font-orbitron cursor-feather"
+              className="px-8 py-3 border-2 border-ring text-ring hover:bg-ring hover:text-background transition-all duration-300 rounded-full font-orbitron cursor-feather"
             >
               {showAllProjects ? "SHOW LESS" : "VIEW ALL PROJECTS"}
               <i className="fas fa-crosshairs ml-2"></i>
