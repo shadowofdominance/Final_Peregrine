@@ -10,18 +10,18 @@ export default function WindCurrents() {
   return (
     <section
       id="currents"
-      className="min-h-screen py-20 relative overflow-hidden bg-muted"
+      className="min-h-screen py-20 relative overflow-hidden"
     >
       <div className="section-fade-top" />
       {/* Background image restored with solid overlay */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
           src="/images/windcurrents.jpg"
           alt="Soaring falcon over clouds"
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-muted/75" />
+        <div className="absolute inset-0 bg-background/50" />
       </div>
       <div className="section-fade-bottom" />
 

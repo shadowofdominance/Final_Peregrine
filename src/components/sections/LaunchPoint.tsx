@@ -41,17 +41,17 @@ export default function LaunchPoint() {
   return (
     <section
       id="launch"
-      className="min-h-screen relative flex items-center justify-center bg-background overflow-hidden"
+      className="min-h-screen relative flex items-center justify-center overflow-hidden"
     >
       {/* Background Image (solid overlay, no gradients) */}
-      <div className="absolute inset-0 -z-10 pointer-events-none select-none">
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <img
           src="/images/wallhaven-0p2q2m.jpg"
           alt="Peregrine silhouette sky"
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-background/55" />
       </div>
       {/* Falling Feathers Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
