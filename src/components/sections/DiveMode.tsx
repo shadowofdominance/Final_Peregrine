@@ -61,48 +61,11 @@ export default function DiveMode() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
           {(showAllProjects ? projects : projects.slice(0, 3)).map(
             (project, index) => (
-              <motion.div
+              <TiltProjectCard
                 key={project.id}
-                className="project-card glass-effect rounded-xl p-6 cursor-feather group"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <div className="space-y-3">
-                  <h3 className="font-orbitron font-bold text-xl text-foreground">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-primary/20 text-ring text-xs rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex space-x-3 pt-2">
-                    <a
-                      href={project.codeUrl}
-                      className="flex items-center space-x-2 text-ring hover:text-foreground transition-colors cursor-feather"
-                    >
-                      <i className="fab fa-github"></i>
-                      <span>Code</span>
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+                project={project}
+                index={index}
+              />
             )
           )}
         </div>
@@ -126,5 +89,104 @@ export default function DiveMode() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+// --- 3D Tilt Card Component ---
+interface Project {
+  id: string | number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  codeUrl: string;
+}
+
+function TiltProjectCard({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) {
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateY = (x / rect.width - 0.5) * 22; // horizontal tilt
+    const rotateX = -(y / rect.height - 0.5) * 18; // vertical tilt
+    setTilt({ x: rotateX, y: rotateY });
+  };
+
+  const resetTilt = () => {
+    setTilt({ x: 0, y: 0 });
+    setIsHover(false);
+  };
+
+  return (
+    <motion.div
+      className="tilt-scene"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
+    >
+      <motion.div
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={resetTilt}
+        style={{
+          transform: `perspective(1100px) rotateX(${tilt.x.toFixed(
+            2
+          )}deg) rotateY(${tilt.y.toFixed(2)}deg) translateZ(${
+            isHover ? "8px" : "0"
+          })`,
+        }}
+        className="project-card tilt-card glass-effect rounded-xl p-6 cursor-feather group relative"
+        animate={{
+          scale: isHover ? 1.03 : 1,
+          boxShadow: isHover
+            ? "0 18px 40px -10px rgba(189,147,249,0.35)"
+            : "0 4px 18px -4px rgba(0,0,0,0.55)",
+        }}
+        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+      >
+        <div className="absolute inset-0 rounded-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-screen bg-[radial-gradient(circle_at_30%_30%,rgba(189,147,249,0.35),transparent_60%)]" />
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-48 object-cover rounded-lg mb-4 shadow-lg shadow-black/40"
+          loading="lazy"
+        />
+        <div className="space-y-3 relative z-10">
+          <h3 className="font-orbitron font-bold text-xl text-foreground tracking-wide">
+            {project.title}
+          </h3>
+          <p className="text-muted-foreground text-sm">{project.description}</p>
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-primary/15 text-ring text-[11px] rounded-full backdrop-blur-sm border border-primary/30"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex space-x-3 pt-2">
+            <a
+              href={project.codeUrl}
+              className="flex items-center space-x-2 text-ring hover:text-foreground transition-colors"
+            >
+              <i className="fab fa-github"></i>
+              <span>Code</span>
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }
