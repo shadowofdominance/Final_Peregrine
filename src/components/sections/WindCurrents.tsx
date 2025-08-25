@@ -10,15 +10,18 @@ export default function WindCurrents() {
       id="currents"
       className="min-h-screen py-20 relative overflow-hidden"
     >
+      {/* Background Image (alternating section with image) */}
       <div
-        className="absolute inset-0 opacity-10 parallax-bg"
+        className="absolute inset-0 opacity-40 sm:opacity-50 parallax-bg transition-opacity duration-700"
         style={{
-          backgroundImage: "url('/images/windcurrents.jpg')",
+          backgroundImage:
+            "linear-gradient(rgba(40,42,54,0.35), rgba(40,42,54,0.75)), url('/images/windcurrents.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-muted to-background"></div>
+      {/* Soft translucent gradient overlay to keep text readable while showing image */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/50 to-background/80" />
 
       {/* Animated Wind Trails */}
       <div className="absolute inset-0">
