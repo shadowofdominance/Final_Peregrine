@@ -144,6 +144,8 @@ export default function LaunchPoint() {
           </motion.div>
         ))}
       </div>
+      {/* Bottom fade to blend into next section */}
+      <div className="section-fade-bottom" />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 md:pt-24 lg:pt-16">
         <img
