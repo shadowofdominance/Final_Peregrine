@@ -36,7 +36,7 @@ export default function NestView() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -84,7 +84,7 @@ export default function NestView() {
           ></motion.div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start lg:items-center">
           {/* Personal Story */}
           <motion.div
             className="glass-effect rounded-xl p-8"
@@ -96,7 +96,7 @@ export default function NestView() {
             <h3 className="font-orbitron font-bold text-2xl text-falcon-cloud mb-6">
               The Journey of Resilience
             </h3>
-            <div className="space-y-4 text-falcon-steel">
+            <div className="space-y-4 text-falcon-steel text-sm sm:text-base leading-relaxed">
               <p>
                 Like the peregrine falcon, my journey began with a leap of
                 faith. From the heights of uncertainty to the precision of
@@ -154,24 +154,26 @@ export default function NestView() {
               transition: { duration: 0.8 },
             }}
             viewport={{ once: true, amount: 0.5 }}
-            viewport={{ once: true }}
           >
             <img
-              src="images\IMG-20240705-WA0013.jpg"
-              alt="Team Collaboration"
-              className="w-full h-70 object-center rounded-xl shadow-2xl"
+              src="/images/IMG-20240705-WA0013.jpg"
+              alt="Team collaboration group"
+              className="w-full rounded-xl shadow-2xl object-cover aspect-video"
+              loading="lazy"
             />
 
             <div className="grid grid-cols-2 gap-4">
               <img
                 src="/images/teamcollab.jpg"
                 alt="Team collaboration"
-                className="w-full h-35 object-center rounded-lg"
+                className="w-full rounded-lg object-cover aspect-video"
+                loading="lazy"
               />
               <img
                 src="/images/evogen1.jpg"
-                alt="Team Collaboration"
-                className="w-full h-35 object-center rounded-lg"
+                alt="Event moment"
+                className="w-full rounded-lg object-cover aspect-video"
+                loading="lazy"
               />
             </div>
 

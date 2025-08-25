@@ -6,10 +6,7 @@ export default function LaunchPoint() {
     if (element) {
       const offsetTop =
         element.getBoundingClientRect().top + window.pageYOffset - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
   };
 
@@ -50,202 +47,155 @@ export default function LaunchPoint() {
           "linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('/images/wallhaven-0p2q2m.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-falcon-night/50 to-falcon-night"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-falcon-night/50 to-falcon-night" />
 
-      {/* Falling Feathers Animation*/}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-0 left-10"
-          animate={{
-            y: [0, window.innerHeight + 100],
+      {/* Falling Feathers Animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+        {[
+          {
+            pos: "left-10",
+            delay: 0,
+            dur: 8,
+            cls: "opacity-60 text-lg",
             x: [0, 30, -20, 10],
-            rotate: [0, 180, 360, 540],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeIn",
-            repeatDelay: 2,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-60 text-lg"></i>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 right-20"
-          animate={{
-            y: [0, window.innerHeight + 100],
-            x: [0, -25, 15, -10],
-            rotate: [0, 270, 450, 630],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeIn",
+            rot: [0, 180, 360, 540],
+          },
+          {
+            pos: "right-20",
             delay: 3,
-            repeatDelay: 1,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-40 text-sm"></i>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 left-1/3"
-          animate={{
-            y: [0, window.innerHeight + 100],
-            x: [0, 20, -30, 5],
-            rotate: [0, 360, 720],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeIn",
+            dur: 10,
+            cls: "opacity-40 text-sm",
+            x: [0, -25, 15, -10],
+            rot: [0, 270, 450, 630],
+          },
+          {
+            pos: "left-1/3",
             delay: 6,
-            repeatDelay: 0.5,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-50 text-base"></i>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 right-1/3"
-          animate={{
-            y: [0, window.innerHeight + 100],
-            x: [0, -15, 25, -5],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeIn",
+            dur: 12,
+            cls: "opacity-50 text-base",
+            x: [0, 20, -30, 5],
+            rot: [0, 360, 720],
+          },
+          {
+            pos: "right-1/3",
             delay: 1,
-            repeatDelay: 3,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-30 text-sm"></i>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 left-1/4"
-          animate={{
-            y: [0, window.innerHeight + 100],
-            x: [0, 15, -10, 20],
-            rotate: [0, 270, 540],
-          }}
-          transition={{
-            duration: 11,
-            repeat: Infinity,
-            ease: "easeIn",
+            dur: 9,
+            cls: "opacity-30 text-sm",
+            x: [0, -15, 25, -5],
+            rot: [0, 180, 360],
+          },
+          {
+            pos: "left-1/4",
             delay: 4,
-            repeatDelay: 1.5,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-35 text-base"></i>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 right-1/4"
-          animate={{
-            y: [0, window.innerHeight + 100],
-            x: [0, -20, 12, -8],
-            rotate: [0, 360, 720],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeIn",
+            dur: 11,
+            cls: "opacity-35 text-base",
+            x: [0, 15, -10, 20],
+            rot: [0, 270, 540],
+          },
+          {
+            pos: "right-1/4",
             delay: 2,
-            repeatDelay: 2.5,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-45 text-sm"></i>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 left-3/4"
-          animate={{
-            y: [0, window.innerHeight + 100],
-            x: [0, 25, -18, 6],
-            rotate: [0, 180, 360, 540],
-          }}
-          transition={{
-            duration: 13,
-            repeat: Infinity,
-            ease: "easeIn",
+            dur: 7,
+            cls: "opacity-45 text-sm",
+            x: [0, -20, 12, -8],
+            rot: [0, 360, 720],
+          },
+          {
+            pos: "left-3/4",
             delay: 5,
-            repeatDelay: 1,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-25 text-lg"></i>
-        </motion.div>
-        <motion.div
-          className="absolute top-0 left-1/2"
-          animate={{
-            y: [0, window.innerHeight + 100],
-            x: [0, -12, 22, -8],
-            rotate: [0, 450, 900],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeIn",
+            dur: 13,
+            cls: "opacity-25 text-lg",
+            x: [0, 25, -18, 6],
+            rot: [0, 180, 360, 540],
+          },
+          {
+            pos: "left-1/2",
             delay: 7,
-            repeatDelay: 2,
-          }}
-        >
-          <i className="fas fa-feather text-falcon-sky opacity-55 text-base"></i>
-        </motion.div>
+            dur: 9,
+            cls: "opacity-55 text-base",
+            x: [0, -12, 22, -8],
+            rot: [0, 450, 900],
+          },
+        ].map((f, i) => (
+          <motion.div
+            key={i}
+            className={`absolute top-0 ${f.pos}`}
+            animate={{
+              y: [
+                0,
+                typeof window !== "undefined" ? window.innerHeight + 100 : 1000,
+              ],
+              x: f.x,
+              rotate: f.rot,
+            }}
+            transition={{
+              duration: f.dur,
+              repeat: Infinity,
+              ease: "easeIn",
+              delay: f.delay,
+              repeatDelay: 1,
+            }}
+          >
+            <i className={`fas fa-feather text-falcon-sky ${f.cls}`} />
+          </motion.div>
+        ))}
       </div>
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-32 sm:pt-24 md:pt-0">
-        {/* Falcon Silhouette */}
-        <img 
+
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 md:pt-24 lg:pt-16">
+        <img
           src="/images/profilepic.jpg"
-          alt="Peregrine falcon silhouette"
- className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full object-center border-4 border-falcon-sky"
+          alt="Portrait of Gourav Sapaliga"
+          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full object-cover border-4 border-falcon-sky shadow-lg"
+          loading="lazy"
         />
-        <br />
         <motion.h1
-          className="font-orbitron font-black text-6xl md:text-8xl mb-6 leading-tight"
+          className="font-orbitron font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-6 leading-[1.05] break-words tracking-tight mt-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
- className="font-orbitron font-black text-6xl md:text-8xl mb-6 leading-tight break-words"
+          transition={{ duration: 1, delay: 0.4 }}
         >
-          <span className="block text-6xl text-falcon-cloud break-words">GOURAV</span>
- <span className="block text-falcon-sky bg-gradient-to-r from-falcon-blue to-falcon-sky bg-clip-text text-transparent break-words">
+          <span className="block text-falcon-cloud">GOURAV</span>
+          <span className="block bg-gradient-to-r from-falcon-blue to-falcon-sky bg-clip-text text-transparent">
             SAPALIGA
           </span>
         </motion.h1>
-        <div className="mt-12 pt-8 border-t border-falcon-steel/20">
-          <h3 className="font-orbitron font-bold text-xl text-falcon-cloud text-center mb-8">
+
+        <div className="mt-10 sm:mt-12 pt-8 border-t border-falcon-steel/20">
+          <h3 className="font-orbitron font-bold text-lg sm:text-xl text-falcon-cloud text-center mb-6 sm:mb-8">
             Alternative Flight Paths
           </h3>
-          <div className="flex flex-wrap justify-center gap-6 break-words">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
             {contactLinks.map((link) => (
               <motion.a
                 key={link.label}
                 href={link.href}
-                className="flex items-center space-x-3 px-6 py-3 bg-falcon-storm hover:bg-falcon-blue rounded-lg transition-all duration-300 cursor-feather group"
+                className="flex items-center space-x-2 sm:space-x-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-falcon-storm/80 hover:bg-falcon-blue/90 rounded-lg transition-all duration-300 cursor-feather group backdrop-blur-sm text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <i
                   className={`${link.icon} text-falcon-sky group-hover:text-white`}
-                ></i>
- <span className="text-falcon-cloud group-hover:text-white break-words">
+                />
+                <span className="text-falcon-cloud group-hover:text-white whitespace-nowrap">
                   {link.label}
                 </span>
               </motion.a>
             ))}
           </div>
         </div>
-        <br />
+
         <motion.button
           onClick={scrollToDive}
-          className="group relative px-12 py-4 bg-falcon-blue hover:bg-falcon-sky transition-all duration-300 rounded-full font-orbitron font-bold text-lg cursor-feather transform hover:scale-105 animate-pulse-glow"
-          initial={{ opacity: 0, scale: 0.8 }}
+          className="mt-10 group relative px-10 sm:px-12 py-4 bg-falcon-blue hover:bg-falcon-sky transition-all duration-300 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather transform hover:scale-105 animate-pulse-glow"
+          initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          transition={{ duration: 1, delay: 1 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <span className="relative z-10">BEGIN DESCENT</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-falcon-blue to-falcon-sky rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <i className="fas fa-chevron-down ml-3 group-hover:animate-bounce"></i>
+          <div className="absolute inset-0 bg-gradient-to-r from-falcon-blue to-falcon-sky rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <i className="fas fa-chevron-down ml-3 group-hover:animate-bounce" />
         </motion.button>
       </div>
     </section>

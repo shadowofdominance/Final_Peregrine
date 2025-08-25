@@ -33,7 +33,7 @@ export default function WindCurrents() {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -81,23 +81,23 @@ export default function WindCurrents() {
           ></motion.div>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-10 sm:space-y-12">
           {events.map((event, index) => (
             <motion.div
               key={event.id}
-              className="timeline-item pl-12 cursor-feather group"
+              className="timeline-item pl-6 sm:pl-10 md:pl-12 cursor-feather group"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="glass-effect rounded-xl p-6 transition-all duration-300 break-words overflow-hidden text-wrap">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 flex-wrap">
+              <div className="glass-effect rounded-xl p-5 sm:p-6 transition-all duration-300 break-words overflow-hidden text-wrap">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 w-full">
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full max-w-[300px] h-auto aspect-video md:h-40 object-cover rounded-lg"
+                    className="w-full md:w-auto max-w-full md:max-w-[300px] aspect-video object-cover rounded-lg"
                   />
 
                   <div className="flex-1">

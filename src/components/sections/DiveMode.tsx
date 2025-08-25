@@ -19,7 +19,7 @@ export default function DiveMode() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-falcon-cloud"
+            className="font-orbitron font-bold text-4xl sm:text-5xl md:text-6xl mb-6 text-falcon-cloud leading-tight"
             initial={{ opacity: 1 }}
             whileInView={{
               opacity: 1,
@@ -58,7 +58,7 @@ export default function DiveMode() {
           ></motion.div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
           {(showAllProjects ? projects : projects.slice(0, 3)).map(
             (project, index) => (
               <motion.div

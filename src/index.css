@@ -354,4 +354,20 @@
     transform-origin: left;
     z-index: 1000;
   }
+
+  /* Responsive Quality-of-Life Tweaks */
+  @media (max-width: 640px) {
+    /* Disable fixed backgrounds on mobile to avoid jitter & performance issues */
+    .parallax-bg {
+      background-attachment: scroll;
+    }
+    body {
+      -webkit-text-size-adjust: 100%;
+    }
+  }
+
+  /* Avoid accidental horizontal scroll from animations */
+  html, body, #root {
+    max-width: 100%;
+  }
 }

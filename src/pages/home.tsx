@@ -57,8 +57,8 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-falcon-night border-t border-falcon-steel/20 py-12">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <footer className="bg-falcon-night border-t border-falcon-steel/20 py-10 mt-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
             <img
               src="/images/eagle.png"
@@ -69,15 +69,17 @@ export default function Home() {
               PROJECT PEREGRINE
             </span>
           </div>
-          <p className="text-falcon-steel mb-4">Born to fall. Built to fly.</p>
-          <div className="flex justify-center space-x-6 text-falcon-steel">
+          <p className="text-falcon-steel mb-4 text-sm sm:text-base">
+            Born to fall. Built to fly.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 text-falcon-steel space-y-2 sm:space-y-0 text-xs sm:text-sm">
             <span>© 2025 Project Peregrine</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Crafted with precision</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Powered by passion</span>
           </div>
-          <p className="text-falcon-steel text-sm mt-4">
+          <p className="text-falcon-steel text-xs sm:text-sm mt-5 leading-relaxed">
             Music: "Titan" by Scott Buckley – released under CC-BY 4.0.
             <br />
             <a
