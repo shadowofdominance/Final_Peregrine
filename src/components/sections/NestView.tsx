@@ -27,9 +27,21 @@ export default function NestView() {
   ];
 
   return (
-    <section id="nest" className="min-h-screen py-20 relative bg-muted">
+    <section
+      id="nest"
+      className="min-h-screen py-20 relative bg-muted overflow-hidden"
+    >
       <div className="section-fade-top" />
-      {/* Removed image/gradient for solid Dracula color */}
+      {/* Background image restored with solid overlay */}
+      <div className="absolute inset-0 -z-10 pointer-events-none select-none">
+        <img
+          src="/images/nestview.jpg"
+          alt="Abstract nest view backdrop"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-muted/80" />
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
