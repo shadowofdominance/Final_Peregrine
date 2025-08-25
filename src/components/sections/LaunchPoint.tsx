@@ -190,16 +190,18 @@ export default function LaunchPoint() {
 
         <motion.button
           onClick={scrollToDive}
-          className="mt-10 group relative px-10 sm:px-12 py-4 bg-primary hover:bg-ring transition-all duration-300 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather transform hover:scale-105"
+          className="mt-10 group relative px-10 sm:px-12 py-4 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather bg-primary hover:bg-primary/90 transition-colors duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-primary/40 shadow-lg shadow-primary/30 hover:shadow-primary/50 overflow-hidden"
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="relative z-10">BEGIN DESCENT</span>
-          <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 bg-ring" />
-          <i className="fas fa-chevron-down ml-3 group-hover:animate-bounce" />
+          <span className="relative z-10 flex items-center">
+            BEGIN DESCENT
+            <i className="fas fa-chevron-down ml-3 text-white transition-transform duration-300 group-hover:translate-y-1" />
+          </span>
+          <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.35),transparent_70%)]" />
         </motion.button>
       </div>
     </section>
