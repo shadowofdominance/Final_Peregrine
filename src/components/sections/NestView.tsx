@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function NestView() {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -41,52 +42,7 @@ export default function NestView() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.h2
-            className="font-orbitron font-bold text-5xl md:text-6xl mb-6 text-foreground"
-            initial={{ opacity: 1 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 0.1,
-                onComplete: () => setIsAnimated(true),
-              },
-            }}
-            viewport={{ once: true }}
-          >
-            <div
-              className={`talon-scratch-container ${
-                isAnimated ? "talon-scratch-active" : ""
-              }`}
-            >
-              <div className="talon-scratch-overlay"></div>
-              <div className="talon-impact-flash"></div>
-              <span className="talon-hidden relative z-1">NEST VIEW</span>
-            </div>
-            <motion.span
-              className="block text-2xl text-muted-foreground font-inter font-normal mt-2"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
-              viewport={{ once: true }}
-            >
-              The Genesis of Flight
-            </motion.span>
-          </motion.h2>
-          <motion.div
-            className="w-24 h-1 bg-ring mx-auto"
-            initial={{ scaleX: 0, rotateZ: 45 }}
-            whileInView={{ scaleX: 1, rotateZ: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            viewport={{ once: true }}
-          ></motion.div>
-        </motion.div>
+        <SectionTitle title="NEST VIEW" subtitle="The Genesis of Flight" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start lg:items-center">
           {/* Personal Story */}
