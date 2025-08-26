@@ -149,7 +149,7 @@ export default function LaunchPoint() {
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 md:pt-24 lg:pt-16">
         <img
-          src="/images/profilepic.jpg"
+          src="/images/Webp/profilepic.webp"
           alt="Portrait of Gourav Sapaliga"
           className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full object-cover border-4 border-ring shadow-lg"
           loading="lazy"
