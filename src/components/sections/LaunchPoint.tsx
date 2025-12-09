@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function LaunchPoint() {
@@ -37,6 +38,77 @@ export default function LaunchPoint() {
       href: "/docs/GouravSapaligaResumeUpdated.pdf",
     },
   ];
+
+  const initialLatestUpdates = [
+    {
+      id: 1,
+      type: "youtube",
+      title: "How I built Project Peregrine",
+      thumb: "/images/Webp/profilepic.webp",
+      href: "https://www.youtube.com/",
+    },
+    {
+      id: 2,
+      type: "github",
+      title: "New portfolio site (v2)",
+      thumb: "/images/Webp/profilepic.webp",
+      href: "https://github.com/shadowofdominance",
+    },
+    {
+      id: 3,
+      type: "youtube",
+      title: "Deploying with Vercel & Drizzle",
+      thumb: "/images/Webp/profilepic.webp",
+      href: "https://www.youtube.com/",
+    },
+    {
+      id: 4,
+      type: "github",
+      title: "Mini game demo repo",
+      thumb: "/images/Webp/profilepic.webp",
+      href: "https://github.com/shadowofdominance/mini-game",
+    },
+    {
+      id: 5,
+      type: "youtube",
+      title: "Deploy tips & tricks",
+      thumb: "/images/Webp/profilepic.webp",
+      href: "https://www.youtube.com/",
+    },
+  ];
+
+  const [updates, setUpdates] = useState(initialLatestUpdates.slice(0, 5));
+
+  // expose a helper to add updates dynamically (useful for testing or hooking an API)
+  useEffect(() => {
+    const addLatestUpdate = (item: any) => {
+      const entry = {
+        id: item.id ?? Date.now(),
+        type: item.type ?? "misc",
+        title: item.title ?? "Untitled",
+        thumb: item.thumb ?? "/images/Webp/profilepic.webp",
+        href: item.href ?? "#",
+      };
+
+      setUpdates((prev) => {
+        // remove any existing entry with same id, then prepend
+        const filtered = prev.filter((u) => u.id !== entry.id);
+        const next = [entry, ...filtered];
+        // keep only the latest 5 items
+        return next.slice(0, 5);
+      });
+    };
+
+    // attach to window for quick runtime additions from console
+    // e.g. window.addLatestUpdate({ title: 'New video', href: 'https://...', type: 'youtube' })
+    (window as any).addLatestUpdate = addLatestUpdate;
+
+    return () => {
+      try {
+        delete (window as any).addLatestUpdate;
+      } catch (e) {}
+    };
+  }, []);
 
   return (
     <section
@@ -147,62 +219,103 @@ export default function LaunchPoint() {
       {/* Bottom fade to blend into next section */}
       <div className="section-fade-bottom" />
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 md:pt-24 lg:pt-16">
-        <img
-          src="/images/Webp/profilepic.webp"
-          alt="Portrait of Gourav Sapaliga"
-          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full object-cover border-4 border-ring shadow-lg"
-          loading="lazy"
-        />
-        <motion.h1
-          className="font-orbitron font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-6 leading-[1.05] break-words tracking-tight mt-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
-          <span className="block text-foreground">GOURAV</span>
-          <span className="block text-primary">SAPALIGA</span>
-        </motion.h1>
+      <div className="relative z-10 w-full px-4 sm:px-6 pt-28 sm:pt-32 md:pt-24 lg:pt-16">
+        <div className="flex flex-col md:flex-row items-start gap-10 max-w-6xl md:ml-6 lg:ml-8">
+          {/* Left column: profile/details (left-aligned) */}
+          <div className="flex-1 text-left md:pl-6 lg:pl-10">
+            <img
+              src="/images/Webp/profilepic.webp"
+              alt="Portrait of Gourav Sapaliga"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-ring shadow-lg"
+              loading="lazy"
+            />
 
-        <div className="mt-10 sm:mt-12 pt-8 border-t border-muted-foreground/20">
-          <h3 className="font-orbitron font-bold text-lg sm:text-xl text-foreground text-center mb-6 sm:mb-8">
-            Alternative Flight Paths
-          </h3>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
-            {contactLinks.map((link) => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                className="flex items-center space-x-2 sm:space-x-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-muted/70 hover:bg-primary/70 rounded-lg transition-all duration-300 cursor-feather group backdrop-blur-sm text-sm sm:text-base"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <i
-                  className={`${link.icon} text-ring group-hover:text-white`}
-                />
-                <span className="text-foreground group-hover:text-white whitespace-nowrap">
-                  {link.label}
-                </span>
-              </motion.a>
-            ))}
+            <motion.h1
+              className="font-orbitron font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-6 leading-[1.05] break-words tracking-tight mt-6"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              <span className="block text-foreground">GOURAV</span>
+              <span className="block text-primary">SAPALIGA</span>
+            </motion.h1>
+
+            <div className="mt-6 pt-4 border-t border-muted-foreground/20">
+              <h3 className="font-orbitron font-bold text-lg sm:text-xl text-foreground mb-4">
+                Alternative Flight Paths
+              </h3>
+              <div className="flex flex-wrap justify-start gap-3 sm:gap-4 md:gap-6">
+                {contactLinks.map((link) => (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    className="flex items-center space-x-2 sm:space-x-3 px-4 sm:px-5 py-2.5 sm:py-3 bg-muted/70 hover:bg-primary/70 rounded-lg transition-all duration-300 cursor-feather group backdrop-blur-sm text-sm sm:text-base"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <i
+                      className={`${link.icon} text-ring group-hover:text-white`}
+                    />
+                    <span className="text-foreground group-hover:text-white whitespace-nowrap">
+                      {link.label}
+                    </span>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            <motion.button
+              onClick={scrollToDive}
+              className="mt-8 group relative px-10 sm:px-12 py-4 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather bg-primary hover:bg-primary/90 transition-colors duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-primary/40 shadow-lg shadow-primary/30 hover:shadow-primary/50 overflow-hidden"
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 1 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="relative z-10 flex items-center">
+                BEGIN DESCENT
+                <i className="fas fa-chevron-down ml-3 text-white transition-transform duration-300 group-hover:translate-y-1" />
+              </span>
+              <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.35),transparent_70%)]" />
+            </motion.button>
           </div>
-        </div>
 
-        <motion.button
-          onClick={scrollToDive}
-          className="mt-10 group relative px-10 sm:px-12 py-4 rounded-full font-orbitron font-bold text-base sm:text-lg cursor-feather bg-primary hover:bg-primary/90 transition-colors duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-primary/40 shadow-lg shadow-primary/30 hover:shadow-primary/50 overflow-hidden"
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="relative z-10 flex items-center">
-            BEGIN DESCENT
-            <i className="fas fa-chevron-down ml-3 text-white transition-transform duration-300 group-hover:translate-y-1" />
-          </span>
-          <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.35),transparent_70%)]" />
-        </motion.button>
+          {/* Right column: Latest Updates */}
+          <aside className="w-full md:w-80 lg:w-96 md:absolute md:top-1/2 md:right-12 md:transform md:-translate-y-1/2 md:z-20">
+            <div className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 border border-muted-foreground/20 shadow-sm">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">Latest Updates</h4>
+                <span className="text-sm text-muted-foreground">Live</span>
+              </div>
+
+              <div className="space-y-3">
+                {updates.map((u: any) => (
+                  <a
+                    key={u.id}
+                    href={u.href}
+                    className="flex items-center space-x-3 p-2 rounded-md hover:bg-muted/60 transition-colors"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={u.thumb}
+                      alt={u.title}
+                      className="w-16 h-10 object-cover rounded-sm flex-shrink-0"
+                      loading="lazy"
+                    />
+                    <div className="flex-1">
+                      <div className="text-sm font-semibold text-foreground line-clamp-2">
+                        {u.title}
+                      </div>
+                      <div className="text-xs text-muted-foreground mt-1">{u.type.toUpperCase()}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
   );
