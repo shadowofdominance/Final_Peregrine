@@ -25,23 +25,6 @@ export interface Achievement {
 
 export const projects: Project[] = [
   {
-    id: "swift-edit",
-    title: "SwiftEdit",
-    description: "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
-    image: "/images/Swiftedit.png",
-    technologies: [".NET", "C#", "WinForms"],
-    
-    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git"
-  },
-  {
-    id: "medai",
-    title: "MedAI",
-    description: "Med-AI is a sleek web app that scans your symptoms from text and predicts possible diseases in a flash.",
-    image: "/images/medai.jpeg",
-    technologies: ["Python", "TypeScript","BERT", "React.js"],
-    codeUrl: "https://github.com/shadowofdominance/MedAI.git"
-  },
-  {
     id: "Unity test game",
     title: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
     description: "A Unity-built prototype featuring grid-based movement, custom editor tools for obstacle placement, BFS pathfinding, and responsive enemy AI. Developed from scratch to simulate turn-based tactical gameplay.",
@@ -49,6 +32,23 @@ export const projects: Project[] = [
     technologies: ["C#", "Unity3D"],
     codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git"
   },
+  {
+  id: "unity-gameplay-prototypes",
+  title: "Unity Gameplay Systems – Prototype Collection",
+  description: "A structured collection of gameplay-focused Unity prototypes demonstrating core systems including player mechanics, object spawning, endless runner gameplay, animation & SFX integration, wave and powerup mechanics, and full UI implementation",
+  image: "/images/unitylogo.png",
+  technologies: ["Unity", "C#", "Game Development", "UI Systems"],
+  codeUrl: "https://github.com/shadowofdominance/Unity_Learning_Prototypes.git"
+  },
+  {
+    id: "swift-edit",
+    title: "SwiftEdit",
+    description: "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
+    image: "/images/Swiftedit.png",
+    technologies: [".NET", "C#", "WinForms"],
+    
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git"
+  }
 ];
 
 export const events: Event[] = [
@@ -109,7 +109,6 @@ export const skills: string[] = [
   "C++",
   "Unreal Engine",
   "C#",
-  "Cyber Security",
   "Blender",
   "Unity"
 ];
