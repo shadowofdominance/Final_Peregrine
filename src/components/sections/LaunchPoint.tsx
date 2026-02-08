@@ -301,7 +301,7 @@ export default function LaunchPoint() {
                     <img
                       src={u.thumb}
                       alt={u.title}
-                      className="w-16 h-10 object-cover rounded-sm flex-shrink-0"
+                      className="w-16 h-auto max-h-10 object-cover rounded-sm flex-shrink-0"
                       loading="lazy"
                     />
                     <div className="flex-1">

@@ -115,7 +115,7 @@ function TiltProjectCard({
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover rounded-lg mb-4 shadow-lg shadow-black/40"
+          className="w-full h-auto max-h-48 object-cover rounded-lg mb-4 shadow-lg shadow-black/40"
           loading="lazy"
         />
         <div className="space-y-3 relative z-10">
