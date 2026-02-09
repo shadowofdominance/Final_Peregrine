@@ -102,6 +102,3 @@ Build with `npm run build` and deploy the `dist` directory to any static host (V
 
 This project uses the MIT license (see `package.json` license field).
 
-**Contact & Next Steps**
-
-- If you want, I can commit this change, run the dev server, or add badges/author contact details. Which would you like me to do next?
