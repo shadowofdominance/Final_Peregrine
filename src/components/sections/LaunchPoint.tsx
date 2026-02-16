@@ -28,11 +28,6 @@ export default function LaunchPoint() {
       href: "https://github.com/shadowofdominance",
     },
     {
-      icon: "fab fa-twitter",
-      label: "Twitter",
-      href: "https://twitter.com/not_gourav007",
-    },
-    {
       icon: "fas fa-download",
       label: "Download Resume",
       href: "/docs/GouravSapaligaResumeUpdated.pdf",
