@@ -51,7 +51,7 @@ export const projects: Project[] = [
     image: "/images/chaos-drop.png",
     technologies: ["Unity", "C#", "2D Physics"],
 
-    codeUrl: "https://github.com/yourusername/Chaos_Drop.git",
+    codeUrl: "https://github.com/shadowofdominance/Creative_Prototype.git",
   },
   {
     id: "swift-edit",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
       "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
     image: "/images/Swiftedit.png",
     technologies: [".NET", "C#", "WinForms"],
-    codeUrl: "https://github.com/shadowofdominance/Creative_Prototype.git",
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
   },
 ];
 
