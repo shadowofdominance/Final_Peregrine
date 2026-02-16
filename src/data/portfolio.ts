@@ -29,7 +29,7 @@ export const projects: Project[] = [
     title: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
     description:
       "A Unity-built prototype featuring grid-based movement, custom editor tools for obstacle placement, BFS pathfinding, and responsive enemy AI. Developed from scratch to simulate turn-based tactical gameplay.",
-    image: "/images/unitytestgame.png",
+    image: "/images/Isometric.png",
     technologies: ["C#", "Unity3D"],
     codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git",
   },
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     title: "Chaos Drop",
     description:
       "Chaos Drop is a fast-paced 2D arcade game where players catch the right colors and dodge the wrong ones as the speed escalates into pure chaos.",
-    image: "/images/unitylogo.png",
+    image: "/images/ChaosDrop.png",
     technologies: ["Unity", "C#", "2D Physics"],
 
     codeUrl: "https://github.com/shadowofdominance/Creative_Prototype.git",
