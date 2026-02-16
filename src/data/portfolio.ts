@@ -48,7 +48,7 @@ export const projects: Project[] = [
     title: "Chaos Drop",
     description:
       "Chaos Drop is a fast-paced 2D arcade game where players catch the right colors and dodge the wrong ones as the speed escalates into pure chaos.",
-    image: "/images/chaos-drop.png",
+    image: "/images/unitylogo.png",
     technologies: ["Unity", "C#", "2D Physics"],
 
     codeUrl: "https://github.com/shadowofdominance/Creative_Prototype.git",
