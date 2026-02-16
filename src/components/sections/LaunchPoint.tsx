@@ -29,8 +29,8 @@ export default function LaunchPoint() {
     },
     {
       icon: "fas fa-download",
-      label: "Download Resume",
-      href: "/docs/GouravSapaligaResumeUpdated.pdf",
+      label: "Resume",
+      href: "/docs/GouravSapaligaGameDevJr.pdf",
     },
   ];
 
