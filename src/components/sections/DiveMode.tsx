@@ -69,6 +69,7 @@ function TiltProjectCard({
 }) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHover, setIsHover] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -86,7 +87,7 @@ function TiltProjectCard({
 
   return (
     <motion.div
-      className="tilt-scene"
+      className="tilt-scene h-full"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -103,7 +104,7 @@ function TiltProjectCard({
             isHover ? "8px" : "0"
           })`,
         }}
-        className="project-card tilt-card glass-effect rounded-xl p-6 cursor-feather group relative"
+        className="project-card tilt-card glass-effect rounded-xl p-6 cursor-feather group relative flex flex-col h-full"
         animate={{
           scale: isHover ? 1.03 : 1,
           boxShadow: isHover
@@ -119,11 +120,28 @@ function TiltProjectCard({
           className="w-full h-48 object-cover rounded-lg mb-4 shadow-lg shadow-black/40"
           loading="lazy"
         />
-        <div className="space-y-3 relative z-10">
+        <div className="space-y-3 relative z-10 flex-1">
           <h3 className="font-orbitron font-bold text-xl text-foreground tracking-wide">
             {project.title}
           </h3>
-          <p className="text-muted-foreground text-sm">{project.description}</p>
+          {/* clamp to 3 lines when collapsed, allow expand */}
+          <p
+            className={`text-muted-foreground text-sm ${
+              isExpanded ? "" : "line-clamp-3"
+            }`}
+          >
+            {project.description}
+          </p>
+
+          {/* show read more only for long descriptions */}
+          {project.description && project.description.length > 180 && (
+            <button
+              onClick={() => setIsExpanded((s) => !s)}
+              className="mt-1 text-sm text-primary hover:text-foreground transition-colors"
+            >
+              {isExpanded ? "Show less" : "Read more"}
+            </button>
+          )}
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <span
