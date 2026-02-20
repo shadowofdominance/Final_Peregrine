@@ -25,6 +25,16 @@ export interface Achievement {
 
 export const projects: Project[] = [
   {
+    id: "chaos-drop",
+    title: "Chaos Drop",
+    description:
+      "Chaos Drop is a fast-paced 2D arcade game where players catch the right colors and dodge the wrong ones as the speed escalates into pure chaos.",
+    image: "/images/ChaosDrop2.png",
+    technologies: ["Unity", "C#", "2D Physics"],
+
+    codeUrl: "https://github.com/shadowofdominance/Creative_Prototype.git",
+  },
+  {
     id: "Unity test game",
     title: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
     description:
@@ -42,16 +52,6 @@ export const projects: Project[] = [
     technologies: ["Unity", "C#", "Game Development", "UI Systems"],
     codeUrl:
       "https://github.com/shadowofdominance/Unity_Learning_Prototypes.git",
-  },
-  {
-    id: "chaos-drop",
-    title: "Chaos Drop",
-    description:
-      "Chaos Drop is a fast-paced 2D arcade game where players catch the right colors and dodge the wrong ones as the speed escalates into pure chaos.",
-    image: "/images/ChaosDrop.png",
-    technologies: ["Unity", "C#", "2D Physics"],
-
-    codeUrl: "https://github.com/shadowofdominance/Creative_Prototype.git",
   },
   {
     id: "swift-edit",
