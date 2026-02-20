@@ -150,7 +150,7 @@ function TiltProjectCard({
                 href={project.playUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 group transition-colors"
+                className="flex items-center space-x-1 group transition-colors"
               >
                 <img
                   src="/images/unitylogo.ico"
