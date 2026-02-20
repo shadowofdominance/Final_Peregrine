@@ -134,12 +134,12 @@ function TiltProjectCard({
               </span>
             ))}
           </div>
-          <div className="flex space-x-3 pt-2">
+          <div className="flex space-x-4 pt-2">
             <a
               href={project.codeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-ring hover:text-foreground transition-colors"
+              className="flex items-center space-x-1 text-ring hover:text-foreground transition-colors"
             >
               <i className="fab fa-github"></i>
               <span>Code</span>
@@ -150,9 +150,13 @@ function TiltProjectCard({
                 href={project.playUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-ring hover:text-foreground transition-colors"
+                className="flex items-center space-x-1 text-ring hover:text-foreground transition-colors"
               >
-                <i className="fas fa-play"></i>
+                <img
+                  src="/images/unitylogo.ico"
+                  alt="Unity"
+                  className="w-5 h-5 object-contain"
+                />
                 <span>Play</span>
               </a>
             )}
