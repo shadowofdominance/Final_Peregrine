@@ -42,7 +42,7 @@ export const projects: Project[] = [
     title: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
     description:
       "A Unity-built prototype featuring grid-based movement, custom editor tools for obstacle placement, BFS pathfinding, and responsive enemy AI. Developed from scratch to simulate turn-based tactical gameplay.",
-    image: "/images/Isometric.png",
+    image: "/images/isometric.png",
     technologies: ["C#", "Unity3D"],
     codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git",
   },
