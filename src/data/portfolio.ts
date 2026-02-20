@@ -5,6 +5,7 @@ export interface Project {
   image: string;
   technologies: string[];
   codeUrl: string;
+  playUrl?: string;
 }
 
 export interface Event {
@@ -33,6 +34,8 @@ export const projects: Project[] = [
     technologies: ["Unity", "C#", "2D Physics"],
 
     codeUrl: "https://github.com/shadowofdominance/Creative_Prototype.git",
+    playUrl:
+      "https://play.unity.com/en/games/c0d7356e-3b5b-4032-97c1-559ad334db5a/chaos-drop",
   },
   {
     id: "Unity test game",

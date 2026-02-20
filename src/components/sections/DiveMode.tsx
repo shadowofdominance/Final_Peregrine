@@ -57,6 +57,7 @@ interface Project {
   image: string;
   technologies: string[];
   codeUrl: string;
+  playUrl?: string; // optional Unity / play link for game projects
 }
 
 function TiltProjectCard({
@@ -136,11 +137,25 @@ function TiltProjectCard({
           <div className="flex space-x-3 pt-2">
             <a
               href={project.codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center space-x-2 text-ring hover:text-foreground transition-colors"
             >
               <i className="fab fa-github"></i>
               <span>Code</span>
             </a>
+
+            {project.playUrl && (
+              <a
+                href={project.playUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-ring hover:text-foreground transition-colors"
+              >
+                <i className="fas fa-play"></i>
+                <span>Play</span>
+              </a>
+            )}
           </div>
         </div>
       </motion.div>
