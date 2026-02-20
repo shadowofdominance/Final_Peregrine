@@ -150,14 +150,16 @@ function TiltProjectCard({
                 href={project.playUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-1 text-ring hover:text-foreground transition-colors"
+                className="flex items-center space-x-2 group transition-colors"
               >
                 <img
                   src="/images/unitylogo.ico"
                   alt="Unity"
                   className="w-5 h-5 object-contain"
                 />
-                <span>Play</span>
+                <span className="text-primary group-hover:text-foreground transition-colors">
+                  Play
+                </span>
               </a>
             )}
           </div>
