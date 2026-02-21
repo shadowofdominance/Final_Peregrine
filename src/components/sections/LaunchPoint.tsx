@@ -30,7 +30,7 @@ export default function LaunchPoint() {
     {
       icon: "fas fa-download",
       label: "Resume",
-      href: "/docs/GouravSapaligaGameDevJr.pdf",
+      href: "/docs/GouravJrGameDev.pdf",
     },
   ];
 
