@@ -6,6 +6,7 @@ export interface Project {
   technologies: string[];
   codeUrl: string;
   playUrl?: string;
+  category: string; // e.g. 'Games', 'Tools', 'Collections', 'Prototypes'
 }
 
 export interface Event {
@@ -32,10 +33,10 @@ export const projects: Project[] = [
       "Catch the good objects. Avoid the bad ones. Don’t lose all your lives. Simple controls. Fast reflexes. Pure focus. How long can you survive?",
     image: "/images/ChaosDrop.png",
     technologies: ["Unity", "C#", "2D Physics"],
-
     codeUrl: "https://github.com/shadowofdominance/Chaos_Drop.git",
     playUrl:
       "https://play.unity.com/en/games/c0d7356e-3b5b-4032-97c1-559ad334db5a/chaos-drop",
+    category: "Games",
   },
   {
     id: "Unity test game",
@@ -45,6 +46,7 @@ export const projects: Project[] = [
     image: "/images/isometric.png",
     technologies: ["C#", "Unity3D"],
     codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git",
+    category: "Prototypes",
   },
   {
     id: "unity-gameplay-prototypes",
@@ -55,6 +57,7 @@ export const projects: Project[] = [
     technologies: ["Unity", "C#", "Game Development", "UI Systems"],
     codeUrl:
       "https://github.com/shadowofdominance/Unity_Learning_Prototypes.git",
+    category: "Collections",
   },
   {
     id: "swift-edit",
@@ -64,6 +67,7 @@ export const projects: Project[] = [
     image: "/images/Swiftedit.png",
     technologies: [".NET", "C#", "WinForms"],
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    category: "Tools",
   },
 ];
 

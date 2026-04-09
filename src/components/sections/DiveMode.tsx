@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import SectionTitle from "@/components/ui/SectionTitle";
-import { projects } from "@/data/portfolio";
+import { projects, Project } from "@/data/portfolio";
 
 export default function DiveMode() {
   const [isAnimated, setIsAnimated] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  const filteredProjects = projects.filter((p) =>
+    selectedCategory === "All" ? true : p.category === selectedCategory
+  );
 
   return (
     <section id="dive" className="min-h-screen py-20 relative bg-background">
@@ -15,16 +20,33 @@ export default function DiveMode() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <SectionTitle title="DIVE MODE" subtitle="Project Arsenal" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
-          {(showAllProjects ? projects : projects.slice(0, 3)).map(
-            (project, index) => (
-              <TiltProjectCard
-                key={project.id}
-                project={project}
-                index={index}
-              />
+        <div className="flex flex-wrap gap-2 mb-6">
+          {["All", "Games", "Tools", "Collections", "Prototypes"].map(
+            (cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setShowAllProjects(false);
+                }}
+                className={`px-4 py-2 rounded-full text-sm border-2 transition-all ${
+                  selectedCategory === cat
+                    ? "bg-ring text-background border-ring"
+                    : "border-ring text-ring hover:bg-ring hover:text-background"
+                }`}
+              >
+                {cat}
+              </button>
             )
           )}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
+          {(showAllProjects
+            ? filteredProjects
+            : filteredProjects.slice(0, 3)).map((project, index) => (
+            <TiltProjectCard key={project.id} project={project} index={index} />
+          ))}
         </div>
 
         <motion.div
@@ -34,7 +56,7 @@ export default function DiveMode() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          {projects.length > 3 && (
+          {filteredProjects.length > 3 && (
             <button
               onClick={() => setShowAllProjects(!showAllProjects)}
               className="px-8 py-3 border-2 border-ring text-ring hover:bg-ring hover:text-background transition-all duration-300 rounded-full font-orbitron cursor-feather"
@@ -50,15 +72,7 @@ export default function DiveMode() {
 }
 
 // --- 3D Tilt Card Component ---
-interface Project {
-  id: string | number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  codeUrl: string;
-  playUrl?: string; // optional Unity / play link for game projects
-}
+// --- 3D Tilt Card Component ---
 
 function TiltProjectCard({
   project,
