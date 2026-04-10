@@ -9,7 +9,7 @@ export default function DiveMode() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const filteredProjects = projects.filter((p) =>
-    selectedCategory === "All" ? true : p.category === selectedCategory
+    selectedCategory === "All" ? true : p.category.includes(selectedCategory)
   );
 
   return (
@@ -21,7 +21,7 @@ export default function DiveMode() {
         <SectionTitle title="DIVE MODE" subtitle="Project Arsenal" />
 
         <div className="flex flex-wrap gap-2 mb-6">
-          {["All", "Games", "Tools", "Collections", "Prototypes"].map(
+          {["All", "Games", "Tools", "Collections", "Prototypes", "C++", "C#"].map(
             (cat) => (
               <button
                 key={cat}

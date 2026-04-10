@@ -6,7 +6,7 @@ export interface Project {
   technologies: string[];
   codeUrl: string;
   playUrl?: string;
-  category: string; // e.g. 'Games', 'Tools', 'Collections', 'Prototypes'
+  category: string[]; // e.g. ['Games', 'Tools', 'Collections', 'Prototypes']
 }
 
 export interface Event {
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/shadowofdominance/Chaos_Drop.git",
     playUrl:
       "https://play.unity.com/en/games/c0d7356e-3b5b-4032-97c1-559ad334db5a/chaos-drop",
-    category: "Games",
+    category: ["Games", "C#"],
   },
   {
     id: "Unity test game",
@@ -46,7 +46,17 @@ export const projects: Project[] = [
     image: "/images/isometric.png",
     technologies: ["C#", "Unity3D"],
     codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git",
-    category: "Prototypes",
+    category: ["Prototypes", "Tools", "C#"],
+  },
+  {
+    id: "Gittool-qt",
+    title: "Git tool(qt)",
+    description:
+      "A lightweight Git management tool designed to simplify version control workflows through an intuitive interface. It provides quick insights into repository status, commit history, and project structure without relying on the command line. Built with a focus on speed, clarity, and developer productivity. Ideal for streamlining everyday Git operations in a clean, efficient environment.",
+    image: "/images/Swiftedit.png",
+    technologies: ["C++", "QT", "QT Widgets"],
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    category: ["Prototypes", "C++"],
   },
   {
     id: "unity-gameplay-prototypes",
@@ -57,7 +67,7 @@ export const projects: Project[] = [
     technologies: ["Unity", "C#", "Game Development", "UI Systems"],
     codeUrl:
       "https://github.com/shadowofdominance/Unity_Learning_Prototypes.git",
-    category: "Collections",
+    category: ["Collections", "Prototypes", "C#"],
   },
   {
     id: "swift-edit",
@@ -67,7 +77,27 @@ export const projects: Project[] = [
     image: "/images/Swiftedit.png",
     technologies: [".NET", "C#", "WinForms"],
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
-    category: "Tools",
+    category: ["Tools"],
+  },
+  {
+    id: "Project-Maze",
+    title: "Project Maze V1",
+    description:
+      "A 2D top-down maze system built in Unity featuring procedural generation and dynamic path creation. The project focuses on clean architecture, implementing all four OOP pillars while enabling interactive player-driven navigation. Designed as a scalable foundation, it will evolve into a powerful tool-based maze generation system.",
+    image: "/images/Swiftedit.png",
+    technologies: [".NET", "C#", "WinForms"],
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    category: ["Tools", "Prototypes", "C#"],
+  },
+  {
+    id: "OOPs-Demo",
+    title: "OOPs Demonstration Project",
+    description:
+      "A demonstration project showcasing the principles of Object-Oriented Programming in C#.",
+    image: "/images/Swiftedit.png",
+    technologies: [".NET", "C#", "WinForms"],
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    category: ["Prototypes", "C#"],
   },
 ];
 
