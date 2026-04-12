@@ -31,7 +31,8 @@ export const projects: Project[] = [
     title: "Chaos Drop",
     description:
       "Catch the good objects. Avoid the bad ones. Don’t lose all your lives. Simple controls. Fast reflexes. Pure focus. How long can you survive?",
-    image: "/images/ChaosDrop.png",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/ChaosDrop.png?raw=true",
     technologies: ["Unity", "C#", "2D Physics"],
     codeUrl: "https://github.com/shadowofdominance/Chaos_Drop.git",
     playUrl:
@@ -43,7 +44,8 @@ export const projects: Project[] = [
     title: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
     description:
       "A Unity-built prototype featuring grid-based movement, custom editor tools for obstacle placement, BFS pathfinding, and responsive enemy AI. Developed from scratch to simulate turn-based tactical gameplay.",
-    image: "/images/isometric.png",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/isometric.png?raw=true",
     technologies: ["C#", "Unity3D"],
     codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git",
     category: ["Prototypes", "Tools", "C#"],
@@ -53,10 +55,11 @@ export const projects: Project[] = [
     title: "Git tool(qt)",
     description:
       "A lightweight Git management tool designed to simplify version control workflows through an intuitive interface. It provides quick insights into repository status, commit history, and project structure without relying on the command line. Built with a focus on speed, clarity, and developer productivity. Ideal for streamlining everyday Git operations in a clean, efficient environment.",
-    image: "/images/Swiftedit.png",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/Swiftedit.png?raw=true",
     technologies: ["C++", "QT", "QT Widgets"],
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
-    category: ["Prototypes", "C++"],
+    category: ["Tools", "C++"],
   },
   {
     id: "unity-gameplay-prototypes",
@@ -74,18 +77,20 @@ export const projects: Project[] = [
     title: "SwiftEdit",
     description:
       "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
-    image: "/images/Swiftedit.png",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/Swiftedit.png?raw=true",
     technologies: [".NET", "C#", "WinForms"],
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
-    category: ["Tools"],
+    category: ["Tools", "C#"],
   },
   {
     id: "Project-Maze",
     title: "Project Maze V1",
     description:
       "A 2D top-down maze system built in Unity featuring procedural generation and dynamic path creation. The project focuses on clean architecture, implementing all four OOP pillars while enabling interactive player-driven navigation. Designed as a scalable foundation, it will evolve into a powerful tool-based maze generation system.",
-    image: "/images/Swiftedit.png",
-    technologies: [".NET", "C#", "WinForms"],
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/Swiftedit.png?raw=true",
+    technologies: ["Unity", "C#"],
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
     category: ["Tools", "Prototypes", "C#"],
   },
@@ -94,9 +99,11 @@ export const projects: Project[] = [
     title: "OOPs Demonstration Project",
     description:
       "A demonstration project showcasing the principles of Object-Oriented Programming in C#.",
-    image: "/images/Swiftedit.png",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/oopsdemo.png?raw=true",
     technologies: [".NET", "C#", "WinForms"],
-    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    codeUrl:
+      "https://github.com/shadowofdominance/Jr_Programmer_Last_Project.git",
     category: ["Prototypes", "C#"],
   },
 ];
