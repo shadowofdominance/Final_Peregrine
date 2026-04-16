@@ -54,7 +54,7 @@ export const projects: Project[] = [
     id: "Gittool-qt",
     title: "Git tool(qt)",
     description:
-      "A lightweight Git management tool designed to simplify version control workflows through an intuitive interface. It provides quick insights into repository status, commit history, and project structure without relying on the command line. Built with a focus on speed, clarity, and developer productivity. Ideal for streamlining everyday Git operations in a clean, efficient environment.",
+      "A lightweight Git management tool designed to simplify version control workflows through an intuitive interface. It provides quick insights into repository status, commit history, and project structure without relying on the command line.",
     image:
       "https://github.com/shadowofdominance/PortfolioImages/blob/master/gittool.png?raw=true",
     technologies: ["C++", "QT", "QT Widgets"],
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     id: "Project-Maze",
     title: "Project Maze V1",
     description:
-      "A 2D top-down maze system built in Unity featuring procedural generation and dynamic path creation. The project focuses on clean architecture, implementing all four OOP pillars while enabling interactive player-driven navigation. Designed as a scalable foundation, it will evolve into a powerful tool-based maze generation system.",
+      "A 2D top-down maze system built in Unity featuring procedural generation and dynamic path creation. The project focuses on clean architecture, implementing all four OOP pillars while enabling interactive player-driven navigation.",
     image:
       "https://github.com/shadowofdominance/PortfolioImages/blob/master/projectmaze2.png?raw=true",
     technologies: ["Unity", "C#"],
