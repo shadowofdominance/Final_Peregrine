@@ -27,6 +27,17 @@ export interface Achievement {
 
 export const projects: Project[] = [
   {
+    id: "Project-Maze",
+    title: "Project Maze V1",
+    description:
+      "A 2D top-down maze system built in Unity featuring procedural generation and dynamic path creation. The project focuses on clean architecture, implementing all four OOP pillars while enabling interactive player-driven navigation.",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/projectmaze2.png?raw=true",
+    technologies: ["Unity", "C#"],
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    category: ["Tools", "Prototypes", "C#"],
+  },
+  {
     id: "chaos-drop",
     title: "Chaos Drop",
     description:
@@ -83,17 +94,7 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
     category: ["Tools", "C#"],
   },
-  {
-    id: "Project-Maze",
-    title: "Project Maze V1",
-    description:
-      "A 2D top-down maze system built in Unity featuring procedural generation and dynamic path creation. The project focuses on clean architecture, implementing all four OOP pillars while enabling interactive player-driven navigation.",
-    image:
-      "https://github.com/shadowofdominance/PortfolioImages/blob/master/projectmaze2.png?raw=true",
-    technologies: ["Unity", "C#"],
-    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
-    category: ["Tools", "Prototypes", "C#"],
-  },
+
   {
     id: "OOPs-Demo",
     title: "OOPs Demonstration Project",
