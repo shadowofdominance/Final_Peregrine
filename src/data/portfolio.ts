@@ -34,7 +34,7 @@ export const projects: Project[] = [
     image:
       "https://github.com/shadowofdominance/PortfolioImages/blob/master/projectmaze2.png?raw=true",
     technologies: ["Unity", "C#"],
-    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    codeUrl: "https://github.com/shadowofdominance/Project_Maze_V1.git",
     category: ["Tools", "Prototypes", "C#"],
   },
   {
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     image:
       "https://github.com/shadowofdominance/PortfolioImages/blob/master/gittool.png?raw=true",
     technologies: ["C++", "QT", "QT Widgets"],
-    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    codeUrl: "https://github.com/shadowofdominance/GitTool_QT.git",
     category: ["Tools", "C++"],
   },
   {

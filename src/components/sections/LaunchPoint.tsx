@@ -37,38 +37,38 @@ export default function LaunchPoint() {
   const initialLatestUpdates = [
     {
       id: 1,
+      type: "GitHub",
+      title: "Working on a Git Management Tool using QT",
+      thumb: "/images/githublogo.png",
+      href: "https://github.com/shadowofdominance/GitTool_QT.git",
+    },
+    {
+      id: 2,
+      type: "GitHub",
+      title: "Released a new Maze Generation System in Unity",
+      thumb: "/images/githublogo.png",
+      href: "https://github.com/shadowofdominance/Project_Maze_V1.git",
+    },
+    {
+      id: 3,
       type: "Unity Play",
       title: "Just deployed my first game on Unity play!",
       thumb: "/images/unitylogo.png",
       href: "https://play.unity.com/en/games/c0d7356e-3b5b-4032-97c1-559ad334db5a/chaos-drop",
     },
     {
-      id: 2,
-      type: "github",
-      title: "Created an Index for my Unity Prototypes",
-      thumb: "/images/githublogo.png",
-      href: "https://github.com/shadowofdominance/Unity_Learning_Prototypes.git",
-    },
-    {
-      id: 3,
-      type: "github",
+      id: 4,
+      type: "GitHub",
       title: "Learning the new Input System Package in Unity",
       thumb: "/images/githublogo.png",
       href: "https://github.com/shadowofdominance/Input_System_Learning.git",
     },
     {
-      id: 4,
-      type: "github",
+      id: 5,
+      type: "GitHub",
       title: "My First Project during College!",
       thumb: "/images/githublogo.png",
       href: "https://github.com/shadowofdominance/Swift_Edit_final.git",
-    },
-    {
-      id: 5,
-      type: "github",
-      title: "Learning about character controllers and player movement in Unity",
-      thumb: "/images/githublogo.png",
-      href: "https://github.com/shadowofdominance/Character_Controller_Learning.git",
     },
   ];
 
@@ -281,7 +281,6 @@ export default function LaunchPoint() {
             <div className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 border border-muted-foreground/20 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <h4 className="font-bold text-lg text-foreground">Latest Updates</h4>
-                <span className="text-sm text-muted-foreground">Live</span>
               </div>
 
               <div className="space-y-3">
