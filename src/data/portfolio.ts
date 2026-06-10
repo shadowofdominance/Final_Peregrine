@@ -38,6 +38,17 @@ export const projects: Project[] = [
     category: ["Tools", "Prototypes", "C#"],
   },
   {
+    id: "Gittool-qt",
+    title: "Git tool(qt)",
+    description:
+      "A lightweight Git management tool designed to simplify version control workflows through an intuitive interface. It provides quick insights into repository status, commit history, and project structure without relying on the command line.",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/gittool.png?raw=true",
+    technologies: ["C++", "QT", "QT Widgets"],
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    category: ["Tools", "C++"],
+  },
+  {
     id: "chaos-drop",
     title: "Chaos Drop",
     description:
@@ -60,17 +71,6 @@ export const projects: Project[] = [
     technologies: ["C#", "Unity3D"],
     codeUrl: "https://github.com/shadowofdominance/UnityTestGame.git",
     category: ["Prototypes", "Tools", "C#"],
-  },
-  {
-    id: "Gittool-qt",
-    title: "Git tool(qt)",
-    description:
-      "A lightweight Git management tool designed to simplify version control workflows through an intuitive interface. It provides quick insights into repository status, commit history, and project structure without relying on the command line.",
-    image:
-      "https://github.com/shadowofdominance/PortfolioImages/blob/master/gittool.png?raw=true",
-    technologies: ["C++", "QT", "QT Widgets"],
-    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
-    category: ["Tools", "C++"],
   },
   {
     id: "unity-gameplay-prototypes",
