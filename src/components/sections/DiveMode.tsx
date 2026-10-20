@@ -21,7 +21,7 @@ export default function DiveMode() {
         <SectionTitle title="DIVE MODE" subtitle="Project Arsenal" />
 
         <div className="flex flex-wrap gap-2 mb-6">
-          {["All", "Games", "Tools", "Collections", "Prototypes", "C++", "C#", "QT", "OpenGL"].map(
+          {["All", "Games", "Tools", "Collections", "Prototypes", "C++", "C#", "ASP.NET"].map(
             (cat) => (
               <button
                 key={cat}
