@@ -27,6 +27,17 @@ export interface Achievement {
 
 export const projects: Project[] = [
   {
+    id: "GameProject-FullStack",
+    title: "Game Store Project (Full Stack)",
+    description:
+      "GameStore is a full-stack web application designed to manage a library of video games and their associated genres. It provides a clean, responsive web interface backed by a RESTful API and persistent SQLite database.",
+    image:
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/gamestore.png?raw=true",
+    technologies: ["React", "Node.js", "MongoDB"],
+    codeUrl: "https://github.com/shadowofdominance/GameProject_FullStack.git",
+    category: ["Web Development", "Full Stack"]
+  },
+  {
     id: "Project-Maze",
     title: "Project Maze V1",
     description:
@@ -36,6 +47,17 @@ export const projects: Project[] = [
     technologies: ["Unity", "C#"],
     codeUrl: "https://github.com/shadowofdominance/Project_Maze_V1.git",
     category: ["Tools", "Prototypes", "C#"],
+  },
+  {
+    id: "swift-edit",
+    title: "SwiftEdit",
+    description:
+    "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
+    image:
+    "https://github.com/shadowofdominance/PortfolioImages/blob/master/Swiftedit.png?raw=true",
+    technologies: [".NET", "C#", "WinForms"],
+    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
+    category: ["Tools", "C#"],
   },
   {
     id: "chaos-drop",
@@ -50,18 +72,6 @@ export const projects: Project[] = [
     "https://play.unity.com/en/games/c0d7356e-3b5b-4032-97c1-559ad334db5a/chaos-drop",
     category: ["Games", "C#"],
   },
-  {
-    id: "swift-edit",
-    title: "SwiftEdit",
-    description:
-    "SwiftEdit is a lightning-fast, no-frills text editor built for desktop warriors who crave speed and simplicity.",
-    image:
-    "https://github.com/shadowofdominance/PortfolioImages/blob/master/Swiftedit.png?raw=true",
-    technologies: [".NET", "C#", "WinForms"],
-    codeUrl: "https://github.com/shadowofdominance/Swift_Edit_final.git",
-    category: ["Tools", "C#"],
-  },
-  
   {
     id: "Unity test game",
     title: "Isometric Tactics Prototype – Grid, Pathfinding & AI",
