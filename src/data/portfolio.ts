@@ -32,8 +32,8 @@ export const projects: Project[] = [
     description:
       "GameStore is a full-stack web application designed to manage a library of video games and their associated genres. It provides a clean, responsive web interface backed by a RESTful API and persistent SQLite database.",
     image:
-      "https://github.com/shadowofdominance/PortfolioImages/blob/main/Screenshot_2026-11-07_17-16-21.png?",
-    technologies: ["React", "Node.js", "MongoDB"],
+      "https://github.com/shadowofdominance/PortfolioImages/blob/master/Screenshot_2026-11-07_17-16-21.png",
+    technologies: ["C#", "ASP.NET Core", "AngularJS", "SQLite"],
     codeUrl: "https://github.com/shadowofdominance/GameProject_FullStack.git",
     category: ["Full Stack", "C#", "AngularJS", "ASP.NET"]
   },
