@@ -30,7 +30,7 @@ export default function LaunchPoint() {
     {
       icon: "fas fa-download",
       label: "Resume",
-      href: "/docs/Gourav Sapaliga.pdf",
+      href: "/docs/Gourav_Sapaliga_Resume.pdf",
     },
   ];
 
